@@ -1,0 +1,23 @@
+.about {
+
+  &--content {
+
+
+    &__videos {
+
+      &--video {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+
+        &--link {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

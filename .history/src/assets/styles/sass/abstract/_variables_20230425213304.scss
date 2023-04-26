@@ -1,0 +1,42 @@
+:root {
+  // COLORS
+  --color-primary: #F5F5F5;
+  --color-secondary: #000000;
+  --color-tertiary: #454545;
+
+  --color-primary-rgba: rgba(255, 255, 255, 1);
+  --color-secondary-rgba: rgba(0, 0, 0, 1);
+  --color-tertiary-rgba: rgba(69, 69, 69, 1);
+  --color-secondary-1: rgba(0, 0, 0, 0.5);
+  --color-secondary-2: rgba(0, 0, 0, 0.3);
+
+  --color-hl-1: #FF0000;
+  --color-hl-2: #3498DB;
+  --color-hl-3: #00ff7f;
+  --color-hl-4: hwb(58 44% 3%);
+  --color-hl-5: #d3d3d3;
+
+
+  // FONTS
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Inter', 'Helvetica Neue';
+  --font-tertiary: 'Fira Sans', monospace;
+  --font-family: 'verdana', sans-serif;
+
+  // FONT SIZES
+  --font-size-xs: .8rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.2rem;
+  --font-size-lg: 1.4rem;
+  --font-size-xl: 1.6rem;
+  --font-size-xxl: 1.8rem;
+  --font-size-xxxl: 2rem;
+  --font-size-home: 3.5rem;
+
+  // FONT WEIGHTS
+  --font-weight-lt: 300;
+  --font-weight-nl: 400;
+  --font-weight-md: 500;
+  --font-weight-bd: 700;
+  --font-weight-bds: 900;
+}

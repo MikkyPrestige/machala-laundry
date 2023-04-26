@@ -1,0 +1,56 @@
+.home {
+  width: 100%;
+  height: 75vh;
+  background-color: var(--color-primary-rgba);
+  position: relative;
+
+  &--bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &__img {
+      background-image: url('../../../images/firstEmpire_branch.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+    }
+  }
+
+  &--content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+    z-index: 1;
+
+    &__head {
+      width: 70%;
+      line-height: 2.5rem;
+
+      &--title {
+        font-family: verdana, sans-serif;
+        font-size: var(--font-size-home);
+        font-weight: bold;
+        text-align: justify;
+        letter-spacing: -1.2pt;
+        word-spacing: 7.2pt;
+        line-height: 1.5;
+        font-size: 72px;
+        background: -webkit-linear-gradient(#eee, #333);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}

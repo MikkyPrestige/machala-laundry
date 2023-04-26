@@ -1,0 +1,38 @@
+.about {
+
+  &--content {
+
+
+    &__videos {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      &--video {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+
+        &--link {
+          position: absolute;
+          top: 2rem;
+          left: 1rem;
+         opacity: .8;
+
+         &__img {
+          height: 2.2rem;
+         }
+
+         &__icon {
+          font-size: var(--font-size-xxxl)
+         }
+        }
+
+        &--iframe {
+          border: none;
+        }
+      }
+    }
+  }
+}

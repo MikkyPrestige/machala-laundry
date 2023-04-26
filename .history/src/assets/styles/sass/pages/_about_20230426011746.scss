@@ -1,0 +1,15 @@
+.about {
+
+  &--content {
+
+
+    &__videos {
+
+      &--video {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+  }
+}

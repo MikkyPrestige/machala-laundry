@@ -1,0 +1,41 @@
+.about {
+
+  &--content {
+
+
+    &__videos {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      &--video {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+
+        &--link {
+          position: absolute;
+          top: 2rem;
+          left: 1rem;
+         opacity: .8;
+
+         &__span {
+          color: var(--color-secondary-rgba);
+          font-size: var(--font-size-xxl);
+          cursor: pointer;
+          text-decoration: none;
+        }
+         }
+        }
+
+        &--iframe {
+          border: none;
+          width: 10%;
+          height: 10%;
+        }
+      }
+    }
+  }
+}
