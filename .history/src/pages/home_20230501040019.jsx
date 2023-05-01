@@ -1,11 +1,13 @@
 import React from "react";
-import Layout from "./nav";
-import HomeBottom from "./homeBottom";
+import Layout from "../components/nav";
+import HomeBottom from "../components/homeBottom";
+import Reviews from "../components/review";
+import Gallery from "../components/gallery";
 
 const Home = () => {
   return (
-    <div>
-      <main className="home">
+    <main>
+      <section className="home">
         <Layout />
         <div className="home--bg">
           <div className="home--bg__img"></div>
@@ -26,9 +28,11 @@ const Home = () => {
             </button>
           </div>
         </section>
-      </main>
+      </section>
       <HomeBottom />
-    </div>
+      <Reviews />
+      <Gallery />
+    </main>
   );
 };
 

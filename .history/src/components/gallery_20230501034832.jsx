@@ -1,0 +1,20 @@
+// IMAGE CAROSEL GALLERY
+
+import React, { useState } from "react";
+import {FcNext, FcPrevious } from "react-icons/fc"
+import Building from "../assets/images/building-1-min.jpeg";
+import Building2 from "../assets/images//laundry.svg";
+import Building3 from "../assets/images/machine-5.jpg";
+import Building4 from "../assets/images/courier-guy-holding-parcel";
+import Building5 from "../assets/images/gift.png";
+import Building6 from "../assets/images/machine-bg.jpg";
+
+const Gallery = () => {
+  const [image, setImage] = useState({
+    image: Building,
+    image2: Building2,
+    image3: Building3,
+    image4: Building4,
+    image5: Building5,
+    image6: Building6,
+  });
