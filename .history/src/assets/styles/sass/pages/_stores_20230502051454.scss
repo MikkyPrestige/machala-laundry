@@ -1,0 +1,47 @@
+.stores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-hl-8);
+
+  &--headOffice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-hl-7);
+    border-radius:  1rem;
+
+    &__header {
+      align-self: flex-start;
+     padding: 0 5rem;
+     font-family: var(--font-family);
+
+      &--title {
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-bd);
+        color: var(--color-hl-2);
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      &--subtitle {
+        font-size: var(--font-size-xxxl);
+        font-weight: var(--font-weight-bd);
+        color: var(--color-secondary-rgba);
+        text-transform: capitalize;
+        text-align: justify;
+        word-spacing: 1rem;
+      }
+    }
+    }
+}
