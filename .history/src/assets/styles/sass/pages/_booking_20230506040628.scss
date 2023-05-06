@@ -1,0 +1,95 @@
+.booking {
+  color: white;
+  margin-top: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  &--header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    &__title {
+      color: var(--color-hl-2);
+      font-size: var(--font-size-xxl);
+      font-weight: var(--font-weight-bd);
+      text-transform: uppercase;
+    }
+
+    &__avatar {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 1rem;
+      padding: 1rem;
+      background-color: var(--color-hl-2);
+    }
+  }
+
+  &--container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    &__form {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      &--input {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        &--label {
+          font-size: var(--font-size-lg);
+          font-weight: var(--font-weight-bd);
+          color: var(--color-secondary);
+          text-transform: capitalize;
+        }
+
+        &--input {
+          width: 100%;
+          height: 100%;
+          padding: 1rem;
+          border: none;
+          border-radius: .5rem;
+          background-color: var(--color-hl-2);
+          color: var(--color-secondary);
+          font-size: var(--font-size-lg);
+          font-weight: var(--font-weight-md);
+          font-family: var(--font-family);
+          text-transform: capitalize;
+        }
+      }
+
+      &--btn {
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--color-hl-4-rgb);
+        font-family: var(--font-family);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-bd);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: none;
+        border-radius: .5rem;
+      }
+    }
+  }
+}
