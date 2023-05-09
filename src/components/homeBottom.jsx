@@ -1,7 +1,7 @@
 import React from "react";
 import Avatar from "./avatar";
 import Delivery from "../assets/gif/delivery-boy.gif";
-import Affordable from "../assets/images/gift.png";
+import Affordable from "../assets/gif/shopping.gif";
 import Medal from "../assets/gif/first-place-badge.gif";
 import Collect from "../assets/images/delivery-guy-with-parcel-on-bike.svg";
 import Clean from "../assets/images/laundry.svg";
@@ -46,7 +46,7 @@ const HomeBottom = () => {
             </div>
             <div className="work--content__item--wrapper">
               <h3 className="work--content__item--wrapper__title">
-                Affordable
+                Affordable Service
               </h3>
               <p className="work--content__item--wrapper__subtitle">
                 Our services are affordable and No additional cost added

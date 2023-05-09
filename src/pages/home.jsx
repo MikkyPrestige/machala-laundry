@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/nav";
+import Footer from "../components/footer";
 import HomeBottom from "../components/homeBottom";
 import Reviews from "../components/review";
 import Gallery from "../components/gallery";
@@ -14,9 +15,11 @@ const Home = () => {
         </div>
         <section className="home--content">
           <div className="home--content__head">
-            <h1 className="home--content__head--title">
-              Do Your Laundry Smartly!
-            </h1>
+            <div className="home--content__head--multiColor">
+              <h1 className="home--content__head--multiColor__title">
+                Do Your Laundry Smartly!
+              </h1>
+            </div>
             <p className="home--content__head--subtitle">
               Your laundry gets delivered to your preferred destination in a
               click.
@@ -32,6 +35,9 @@ const Home = () => {
       <HomeBottom />
       <Gallery />
       <Reviews />
+      <div class="footer--home">
+        <Footer />
+      </div>
     </main>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/nav";
 import washingMachine from "../assets/images/machine1.png";
 import Avatar from "../components/avatar";
+import Footer from "../components/footer";
 
 const Booking = () => {
   return (
@@ -231,6 +232,7 @@ const Booking = () => {
           </form>
         </div>
       </div>
+      <Footer />
     </section>
   );
 };

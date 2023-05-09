@@ -6,6 +6,7 @@ import Delivery from "../assets/images/delivery-boy.jpg";
 import Cloth from "../assets/images/dryClean.svg";
 import WashingMachine from "../assets/images/washing-machine.svg";
 import Iron from "../assets/images/dry-cleaner.svg";
+import Footer from "../components/footer";
 
 const About = () => {
   return (
@@ -115,6 +116,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </section>
   );
 };
