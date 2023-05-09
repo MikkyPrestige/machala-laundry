@@ -4,17 +4,15 @@ import Building from "../assets/images/firstEmpire_branch.jpeg";
 import FoldedClothes from "../assets/images/folded-clothes.jpg";
 import WashingMachine from "../assets/images/washing-machine2.jpg";
 import HangedClothes from "../assets/images/hanged-clothes.jpg";
-// import Building5 from "../assets/images/laundry2.jpg";
-// import Building2 from "../assets/images//laundry3.jpg";
+import PackagedShirts from "../assets/images/package.jpeg";
 
 const Gallery = () => {
   const [images] = useState([
+    PackagedShirts,
     FoldedClothes,
     WashingMachine,
     HangedClothes,
     Building,
-    // Building5,
-    // Building2,
   ]);
 
   const [imageIndex, setImageIndex] = useState(0);

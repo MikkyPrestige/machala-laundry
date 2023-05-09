@@ -19,7 +19,7 @@ const HomeBottom = () => {
           </p>
         </div>
         <div className="work--content">
-          <div className="work--content__item">
+          <figure className="work--content__item">
             <div className="work--content__item--avatar">
               <Avatar
                 image={Delivery}
@@ -27,16 +27,16 @@ const HomeBottom = () => {
                 style={{ width: "100%", borderRadius: "50%" }}
               />
             </div>
-            <div className="work--content__item--wrapper">
+            <figcaption className="work--content__item--wrapper">
               <h3 className="work--content__item--wrapper__title">
                 Fast Pickup and Delivery
               </h3>
               <p className="work--content__item--wrapper__subtitle">
                 Your Laundry gets picked up and delivered back to your doorstep
               </p>
-            </div>
-          </div>
-          <div className="work--content__item">
+            </figcaption>
+          </figure>
+          <figure className="work--content__item">
             <div className="whyUs--content__item--avatar">
               <Avatar
                 image={Affordable}
@@ -44,16 +44,16 @@ const HomeBottom = () => {
                 style={{ width: "100%", borderRadius: "50%" }}
               />
             </div>
-            <div className="work--content__item--wrapper">
+            <figcaption className="work--content__item--wrapper">
               <h3 className="work--content__item--wrapper__title">
                 Affordable Service
               </h3>
               <p className="work--content__item--wrapper__subtitle">
                 Our services are affordable and No additional cost added
               </p>
-            </div>
-          </div>
-          <div className="work--content__item">
+            </figcaption>
+          </figure>
+          <figure className="work--content__item">
             <div className="work--content__item--avatar">
               <Avatar
                 image={Medal}
@@ -61,15 +61,15 @@ const HomeBottom = () => {
                 style={{ width: "100%", borderRadius: "50%" }}
               />
             </div>
-            <div className="work--content__item--wrapper">
+            <figcaption className="work--content__item--wrapper">
               <h3 className="work--content__item--wrapper__title">
                 Quality Guaranteed
               </h3>
               <p className="work--content__item--wrapper__subtitle">
                 We ensure the best quality service in time
               </p>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
         </div>
       </section>
       <section className="work paddingTop-sm">
@@ -87,7 +87,7 @@ const HomeBottom = () => {
             <span className="work--content2__progress-bar__stop three"></span>
           </div>
           <div className="work--content2__items">
-            <div className="work--content2__items__item">
+            <figure className="work--content2__items__item">
               <div className="work--content2__items__item--avatar">
                 <Avatar
                   image={Collect}
@@ -95,16 +95,16 @@ const HomeBottom = () => {
                   style={{ width: "100%", height: "100%" }}
                 />
               </div>
-              <div className="work--content2__items__item--text">
+              <figcaption className="work--content2__items__item--text">
                 <h3 className="work--content2__items__item--text__title">
                   We collect
                 </h3>
                 <p className="work--content2__items__item--text__subtitle">
                   We collect your laundry from your doorstep any day of the week
                 </p>
-              </div>
-            </div>
-            <div className="work--content2__items__item">
+              </figcaption>
+            </figure>
+            <figure className="work--content2__items__item">
               <div className="work--content2__items__item--avatar">
                 <Avatar
                   image={Clean}
@@ -112,7 +112,7 @@ const HomeBottom = () => {
                   style={{ width: "100%", height: "100%" }}
                 />
               </div>
-              <div className="work--content2__items__item--text">
+              <figcaption className="work--content2__items__item--text">
                 <h3 className="work--content2__items__item--text__title">
                   We clean
                 </h3>
@@ -120,9 +120,9 @@ const HomeBottom = () => {
                   We use the best quality products and clean your laundry with
                   utmost care.
                 </p>
-              </div>
-            </div>
-            <div className="work--content2__items__item">
+              </figcaption>
+            </figure>
+            <figure className="work--content2__items__item">
               <div className="work--content2__items__item--avatar">
                 <Avatar
                   image={deliver}
@@ -130,7 +130,7 @@ const HomeBottom = () => {
                   style={{ width: "100%", height: "100%" }}
                 />
               </div>
-              <div className="work--content2__items__item--text">
+              <figcaption className="work--content2__items__item--text">
                 <h3 className="work--content2__items__item--text__title">
                   We deliver
                 </h3>
@@ -138,8 +138,8 @@ const HomeBottom = () => {
                   We deliver your clean, fresh laundry back to your doorstep at
                   the scheduled time.
                 </p>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
           </div>
         </div>
         <div className="work--order">

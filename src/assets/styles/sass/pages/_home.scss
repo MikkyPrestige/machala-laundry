@@ -20,6 +20,8 @@
       width: 100%;
       height: 100%;
       opacity: .2;
+      animation: bg-top 15s ease-out both;
+      -webkit-animation: bg-top 15s ease-out both;
     }
   }
 
@@ -36,7 +38,6 @@
 
     &__head {
       width: 85%;
-
 
       &--multiColor {
         padding: 1.5rem;
@@ -73,6 +74,7 @@
           background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
+          animation: focus-in-contract-bck 3s steps(5, end) both;
         }
       }
 
@@ -85,20 +87,33 @@
       }
     }
 
-    &__cta {
-      width: 50%;
+    &__btn {
+      padding: 1.5rem 2rem;
+      font-family: var(--font-family);
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-bd);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: .5rem;
+      border: 1px solid var(--color-hl-4);
+      text-shadow: 0px 1px 0px var(--color-hl-4b);
+      box-shadow: 0px 1rem 1.5rem -.7rem var(--color-hl-4);
+      background: linear-gradient(to bottom, var(--color-hl-4b) 5%, var(--color-hl-4) 100%);
+      background-color: var(--color-hl-4b);
+      display: inline-block;
+      cursor: pointer;
+      z-index: 5;
+      animation: heartbeat 1.5s steps(5, start) infinite alternate-reverse both;
 
-      &--btn {
-        width: 100%;
-        padding: 1rem;
-        background-color: var(--color-hl-4b);
-        font-family: var(--font-family);
-        font-size: var(--font-size-lg);
-        font-weight: var(--font-weight-bd);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border: none;
-        border-radius: .5rem;
+      &:hover {
+        background: linear-gradient(to bottom, var(--color-hl-4) 5%, var(--color-hl-4b) 100%);
+        background-color: var(--color-hl-4);
+      }
+
+      &:active {
+        position: relative;
+        top: 1px;
       }
     }
   }

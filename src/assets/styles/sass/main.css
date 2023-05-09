@@ -50,7 +50,7 @@
 }
 
 html {
-  font-size: 45%;
+  font-size: 50%;
   scroll-behavior: smooth;
 }
 
@@ -82,6 +82,10 @@ code {
 .icon {
   color: var(--color-hl-1);
   font-size: var(--font-size-lg);
+}
+
+.overflow {
+  overflow: hidden;
 }
 
 .layout {
@@ -209,6 +213,8 @@ code {
   width: 100%;
   height: 100%;
   opacity: 0.2;
+  animation: bg-top 15s ease-out both;
+  -webkit-animation: bg-top 15s ease-out both;
 }
 .home--content {
   width: 100%;
@@ -244,6 +250,7 @@ code {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  animation: focus-in-contract-bck 3s steps(5, end) both;
 }
 .home--content__head--subtitle {
   font-family: var(--font-family);
@@ -252,13 +259,8 @@ code {
   color: var(--color-secondary);
   margin-top: 1rem;
 }
-.home--content__cta {
-  width: 50%;
-}
-.home--content__cta--btn {
-  width: 100%;
-  padding: 1rem;
-  background-color: var(--color-hl-4b);
+.home--content__btn {
+  padding: 1.5rem 2rem;
   font-family: var(--font-family);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bd);
@@ -266,6 +268,23 @@ code {
   letter-spacing: 1px;
   border: none;
   border-radius: 0.5rem;
+  border: 1px solid var(--color-hl-4);
+  text-shadow: 0px 1px 0px var(--color-hl-4b);
+  box-shadow: 0px 1rem 1.5rem -0.7rem var(--color-hl-4);
+  background: linear-gradient(to bottom, var(--color-hl-4b) 5%, var(--color-hl-4) 100%);
+  background-color: var(--color-hl-4b);
+  display: inline-block;
+  cursor: pointer;
+  z-index: 5;
+  animation: heartbeat 1.5s steps(5, start) infinite alternate-reverse both;
+}
+.home--content__btn:hover {
+  background: linear-gradient(to bottom, var(--color-hl-4) 5%, var(--color-hl-4b) 100%);
+  background-color: var(--color-hl-4);
+}
+.home--content__btn:active {
+  position: relative;
+  top: 1px;
 }
 
 .homeBottom {
@@ -294,7 +313,12 @@ code {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 80%;
+  width: 85%;
+  color: var(--color-hl-2);
+  background-image: -webkit-radial-gradient(circle, #213ce7 11%, #000000 64%, #213ce7 71%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .work--header__title {
   font-size: var(--font-size-xxl);
@@ -304,19 +328,18 @@ code {
   text-transform: uppercase;
 }
 .work--header__subtitle {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-md);
-  color: var(--color-secondary);
+  font-size: var(--font-size-lg);
 }
 .work--content {
   width: 90%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
 .work--content__item {
-  width: 30%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -324,7 +347,7 @@ code {
   gap: 1rem;
 }
 .work--content__item--avatar {
-  width: 65%;
+  width: 60%;
   height: auto;
   border-radius: 50%;
   padding: 1rem;
@@ -336,11 +359,11 @@ code {
   font-family: var(--font-family);
 }
 .work--content__item--wrapper__title {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
   text-transform: capitalize;
 }
 .work--content__item--wrapper__subtitle {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
   color: var(--color-secondary);
 }
 .work--content2 {
@@ -1217,4 +1240,50 @@ code {
 .footer--copyright span {
   color: var(--color-hl-2);
   font-weight: var(--font-weight-md);
+}
+@keyframes bg-top {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 16%;
+  }
+  100% {
+    transform: scale(1.25) translateY(-15px);
+    transform-origin: top;
+  }
+}
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(300px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(12px);
+    filter: blur(0);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=main.css.map */

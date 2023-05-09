@@ -10,7 +10,7 @@ const Home = () => {
     <main>
       <section className="home">
         <Layout />
-        <div className="home--bg">
+        <div className="home--bg overflow">
           <div className="home--bg__img"></div>
         </div>
         <section className="home--content">
@@ -25,17 +25,13 @@ const Home = () => {
               click.
             </p>
           </div>
-          <div className="home--content__cta">
-            <button className="home--content__cta--btn">
-              Request a service
-            </button>
-          </div>
+          <button className="home--content__btn">Request a service</button>
         </section>
       </section>
       <HomeBottom />
       <Gallery />
       <Reviews />
-      <div class="footer--home">
+      <div className="footer--home">
         <Footer />
       </div>
     </main>
