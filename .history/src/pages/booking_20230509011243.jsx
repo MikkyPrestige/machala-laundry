@@ -170,64 +170,71 @@ const Booking = () => {
                 </p>
               </div>
               <div className="booking--container--form__check--content">
-                <div className="booking--container--form__check--content__group">
-                  <label className="booking--container--form__check--content__group__label">
-                    <input
-                      type="checkbox"
-                      name="instruction"
-                      id="instruction"
-                      className="booking--container--form__check--content__group__label__checkbox"
-                    />
-                    <span className="booking--container--form__check--content__group__label__text">
-                      Service days and turnaround time vary by location
-                    </span>
-                  </label>
-                </div>
-                <div className="booking--container--form__check--content__group">
-                  <label
-                    htmlFor="lost"
-                    className="booking--container--form__check--content__group__label"
-                  >
-                    <input
-                      type="checkbox"
-                      name="lost"
-                      id="lost"
-                      className="booking--container--form__check--content__group__label__checkbox"
-                    />
-                    <span className="booking--container--form__check--content__group__label__text">
-                      Any lost item must be reported via email to within 5
-                      business days.
-                    </span>
-                  </label>
-                </div>
-                <div className="booking--container--form__check--content__group">
-                  <label
-                    htmlFor="caution"
-                    className="booking--container--form__check--content__group__label"
-                  >
-                    <input
-                      type="checkbox"
-                      name="caution"
-                      id="caution"
-                      className="booking--container--form__check--content__group__label__checkbox"
-                    />
-                    <span className="booking--container--form__check--content__group__label__text">
-                      We request that customers remove items and empty pockets
-                      prior to leaving their laundry with us as we cannot be
-                      held responsible for damage of your garments from the left
-                      items in pockets.
-                    </span>
-                  </label>
-                </div>
-                <textarea
-                  className="booking--container--form__check--content__textarea"
+              <div className="booking--container--form__check--group">
+              <label className="booking--container__body--form__check--label">
+                <input
+                  type="checkbox"
                   name="instruction"
                   id="instruction"
-                  placeholder="Please specify any special instructions or requests here"
-                ></textarea>
+                  className="booking--container__body--form__check--label__checkbox"
+                />
+                <span className="booking--container__body--form__check--label__text">
+                  Service days and turnaround time vary by location
+                </span>
+              </label>
+              </div>
+              <div className="booking--container--form__check--group">
+                <label
+                  htmlFor="lost"
+                  className="booking--container--form__check--group__label"
+                >
+                  <input
+                    type="checkbox"
+                    name="lost"
+                    id="lost"
+                    className="booking--container--form__check--group__label__checkbox"
+                  />
+                  <span className="booking--container--form__check--group__label__text">
+                    Any lost item must be reported via email to within 5
+                    business days.
+                  </span>
+                </label>
+              </div>
+              <div className="booking--container--form__check--group">
+                <label
+                  htmlFor="caution"
+                  className="booking--container--form__check--group__label"
+                >
+                  <input
+                    type="checkbox"
+                    name="caution"
+                    id="caution"
+                    className="booking--container--form__check--group__label__checkbox"
+                  />
+                  <span className="booking--container--form__check--group__label__text">
+                    We request that customers remove items and empty pockets
+                    prior to leaving their laundry with us as we cannot be held
+                    responsible for damage of your garments from the left items
+                    in pockets.
+                  </span>
+                </label>
+              </div>
+              <textarea
+                className="booking--body--form__check--textarea"
+                name="instruction"
+                id="instruction"
+                cols="30"
+                rows="10"
+                placeholder="Please specify any special instructions or requests here"
+              >
+              </textarea>
               </div>
             </div>
-            <button className="booking--container--form__cta">Send</button>
+            <div className="booking--container--form__cta--btn">
+              <button className="booking--container--form__cta--btn">
+                Book Now
+              </button>
+            </div>
           </form>
         </div>
       </div>

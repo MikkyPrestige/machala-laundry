@@ -78,9 +78,9 @@ const Stores = () => {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0000000000005!2d3.3515629999999997!3d6.524444000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8f7e7b5c3b3b%3A0x9b2f3b2b2b2b2b2b2!2sAsaba%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1621361000000!5m2!1sen!2sng"
             title="Branch office map"
-            allowFullScreen=""
+            allowfullscreen=""
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            // referrerpolicy="no-referrer-when-downgrade"
             className="stores--container__map--frame"
           ></iframe>
         </div>
@@ -148,7 +148,7 @@ const Stores = () => {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3966.2904721146847!2d6.674200214506728!3d6.225379407863408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x1043f38f43a5554d%3A0x44afc26f586548e1!2smachala%20laundry%20service!3m2!1d6.225020499999999!2d6.6778642!5e0!3m2!1sen!2sng!4v1682997341018!5m2!1sen!2sng"
             title="Head office map"
-            allowFullScreen=""
+            allowFullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="stores--container__map--frame"

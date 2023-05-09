@@ -173,28 +173,6 @@
           }
         }
       }
-
-      &__cta {
-        width: 50%;
-        height: 4rem;
-        border: none;
-        border-radius: .5rem;
-        background-color: var(--color-hl-4);
-        font-size: var(--font-size-lg);
-        font-weight: var(--font-weight-bd);
-        font-family: var(--font-family);
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: all .3s;
-
-        &:hover {
-          background-color: var(--color-hl-5);
-        }
-
-        &:focus {
-          outline: none;
-        }
-      }
     }
   }
 }

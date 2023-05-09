@@ -227,7 +227,7 @@ const Booking = () => {
                 ></textarea>
               </div>
             </div>
-            <button className="booking--container--form__cta">Send</button>
+            <button className="booking--container--form__cta">Book Now</button>
           </form>
         </div>
       </div>

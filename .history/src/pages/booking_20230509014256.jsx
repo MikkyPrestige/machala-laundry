@@ -227,7 +227,11 @@ const Booking = () => {
                 ></textarea>
               </div>
             </div>
-            <button className="booking--container--form__cta">Send</button>
+            <div className="booking--container--form__cta--btn">
+              <button className="booking--container--form__cta--btn">
+                Book Now
+              </button>
+            </div>
           </form>
         </div>
       </div>

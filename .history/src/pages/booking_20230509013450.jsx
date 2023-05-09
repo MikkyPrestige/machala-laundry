@@ -219,15 +219,21 @@ const Booking = () => {
                     </span>
                   </label>
                 </div>
+                <div className="booking--container--form__check--content__group">
                 <textarea
-                  className="booking--container--form__check--content__textarea"
+                  className="booking--container--form__check--content__group__textarea"
                   name="instruction"
                   id="instruction"
                   placeholder="Please specify any special instructions or requests here"
                 ></textarea>
+                </div>
               </div>
             </div>
-            <button className="booking--container--form__cta">Send</button>
+            <div className="booking--container--form__cta--btn">
+              <button className="booking--container--form__cta--btn">
+                Book Now
+              </button>
+            </div>
           </form>
         </div>
       </div>
