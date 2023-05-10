@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
   height: 100%;
-  background-color: var(--color-secondary);
+  background-color: var(--color-black);
 }
 
 .about {
@@ -21,7 +21,7 @@
       width: 70%;
       height: 15rem;
       margin: 0rem auto;
-      background-color: var(--color-primary-rgb);
+      background-color: var(--color-white-rgb);
       border-radius: .3rem;
       -webkit-border-radius: .3rem;
       -moz-border-radius: .3rem;
@@ -30,7 +30,7 @@
 
       &__title {
         width: 60%;
-        color: var(--color-secondary);
+        color: var(--color-black);
         font-size: var(--font-size-xxl);
         font-weight: var(--font-weight-bd);
         text-transform: uppercase;
@@ -58,7 +58,7 @@
 
     &__text {
       padding: 1rem 5rem;
-      color: var(--color-primary-rgb);
+      color: var(--color-white-rgb);
       font-size: var(--font-size-lg);
       font-weight: var(--font-weight-md);
       text-align: justify;
@@ -80,8 +80,8 @@
         text-align: center;
 
         &--link {
-          color: var(--color-secondary-rgba);
-          background-color: var(--color-hl-4);
+          color: var(--color-black-rgba);
+          background-color: var(--color-yellow);
           font-size: var(--font-size-xxl);
           font-weight: var(--font-weight-bd);
           cursor: pointer;
@@ -102,7 +102,7 @@
 .services {
   width: 100%;
   height: 100%;
-  background-color: var(--color-hl-7);
+  background-color: var(--color--white-lt);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,14 +120,14 @@
     padding-top: 2rem;
 
     &__title {
-      color: var(--color-hl-2);
+      color: var(--color-blue-2);
       font-size: var(--font-size-lg);
       font-weight: var(--font-weight-bd);
       text-transform: uppercase;
     }
 
     &__subtitle {
-      color: var(--color-secondary-rgba);
+      color: var(--color-black-rgba);
       font-size: var(--font-size-xxxl);
       font-weight: var(--font-weight-bds);
       font-family: var(--font-family);
@@ -152,7 +152,7 @@
       align-items: center;
       gap: 1rem;
       padding: 1rem;
-      background-color: var(--color-primary-rgba);
+      background-color: var(--color-white-rgba);
       border-radius: 1rem;
       -webkit-border-radius: 1rem;
       -moz-border-radius: 1rem;
@@ -165,7 +165,7 @@
       }
 
       &--title {
-        color: var(--color-secondary-rgba);
+        color: var(--color-black-rgba);
         font-size: var(--font-size-lg);
         font-weight: var(--font-weight-bd);
         text-transform: uppercase;

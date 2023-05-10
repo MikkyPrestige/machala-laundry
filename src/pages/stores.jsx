@@ -26,7 +26,7 @@ const Stores = () => {
             </h2>
           </header>
           <div className="stores--container__body">
-            <h2 className="stores--container__body--title">Our Head Office</h2>
+            <h2 className="stores--container__body--title">Head Office</h2>
             <div className="stores--container__body--content">
               <div className="stores--container__body--content__item">
                 <div className="stores--container__body--content__item--avatar">
@@ -97,7 +97,7 @@ const Stores = () => {
           </header>
           <div className="stores--container__body">
             <h2 className="stores--container__body--title">
-              Our Branch Office
+              Office Building
             </h2>
             <div className="stores--container__body--content">
               <div className="stores--container__body--content__item">

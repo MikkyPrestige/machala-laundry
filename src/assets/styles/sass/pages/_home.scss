@@ -1,7 +1,6 @@
 .home {
   width: 100%;
   height: 65vh;
-  // background-color: var(--color-primary-rgba);
   position: relative;
 
   &--bg {
@@ -10,7 +9,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    // background-color: #646265;
 
     &__img {
       background-image: url('../../../images/washerNdryer.jpg');
@@ -42,14 +40,14 @@
       &--multiColor {
         padding: 1.5rem;
         text-align: center;
-        background: radial-gradient(circle at 1.4% 1.4%, var(--color-hl-2b) .8%, transparent .8%),
-          radial-gradient(circle at 5.5% 3%, var(--color-hl-2b) .45%, transparent .45%),
-          radial-gradient(circle at 2.5% 3.5%, var(--color-hl-4b) .5%, transparent .5%),
-          radial-gradient(circle at 4.5% 1.2%, var(--color-hl-1a) .25%, transparent .25%),
-          radial-gradient(circle at 98% 98%, var(--color-hl-2b) .8%, transparent .8%),
-          radial-gradient(circle at 95% 95%, var(--color-hl-2b) .45%, transparent .45%),
-          radial-gradient(circle at 94.5% 97.5%, var(--color-hl-4b) .5%, transparent .5%),
-          radial-gradient(circle at 98.5% 95.5%, var(--color-hl-1a) .25%, transparent .25%);
+        background: radial-gradient(circle at 1.4% 1.4%, var(--color-blue-1) .8%, transparent .8%),
+          radial-gradient(circle at 5.5% 3%, var(--color-blue-1) .45%, transparent .45%),
+          radial-gradient(circle at 2.5% 3.5%, var(--color-yellow-1) .5%, transparent .5%),
+          radial-gradient(circle at 4.5% 1.2%, var(--color-red) .25%, transparent .25%),
+          radial-gradient(circle at 98% 98%, var(--color-blue-1) .8%, transparent .8%),
+          radial-gradient(circle at 95% 95%, var(--color-blue-1) .45%, transparent .45%),
+          radial-gradient(circle at 94.5% 97.5%, var(--color-yellow-1) .5%, transparent .5%),
+          radial-gradient(circle at 98.5% 95.5%, var(--color-red) .25%, transparent .25%);
 
         &__title {
           font-family: var(--font-primary);
@@ -62,15 +60,15 @@
           width: min-content;
           margin: auto;
           background: linear-gradient(219deg,
-              var(--color-hl-2b) 19%,
+              var(--color-blue-1) 19%,
               transparent 19%, transparent 20%,
-              var(--color-hl-2b) 20%, var(--color-hl-2b) 39%,
+              var(--color-blue-1) 20%, var(--color-blue-1) 39%,
               transparent 39%, transparent 40%,
-              var(--color-hl-4b) 40%, var(--color-hl-4b) 59%,
+              var(--color-yellow-1) 40%, var(--color-yellow-1) 59%,
               transparent 59%, transparent 60%,
-              var(--color-hl-1a) 60%, var(--color-hl-1a) 79%,
+              var(--color-red) 60%, var(--color-red) 79%,
               transparent 79%, transparent 80%,
-              var(--color-hl-1b) 80%);
+              var(--color-red-1) 80%);
           background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
@@ -82,7 +80,7 @@
         font-family: var(--font-family);
         font-size: var(--font-size-lg);
         font-weight: var(--font-weight-bds);
-        color: var(--color-secondary);
+        color: var(--color-black);
         margin-top: 1rem;
       }
     }
@@ -96,19 +94,19 @@
       letter-spacing: 1px;
       border: none;
       border-radius: .5rem;
-      border: 1px solid var(--color-hl-4);
-      text-shadow: 0px 1px 0px var(--color-hl-4b);
-      box-shadow: 0px 1rem 1.5rem -.7rem var(--color-hl-4);
-      background: linear-gradient(to bottom, var(--color-hl-4b) 5%, var(--color-hl-4) 100%);
-      background-color: var(--color-hl-4b);
+      border: 1px solid var(--color-yellow);
+      text-shadow: 0px 1px 0px var(--color-yellow-1);
+      box-shadow: 0px 1rem 1.5rem -.7rem var(--color-yellow);
+      background: linear-gradient(to bottom, var(--color-yellow-1) 5%, var(--color-yellow) 100%);
+      background-color: var(--color-yellow-1);
       display: inline-block;
       cursor: pointer;
       z-index: 5;
       animation: heartbeat 1.5s steps(5, start) infinite alternate-reverse both;
 
       &:hover {
-        background: linear-gradient(to bottom, var(--color-hl-4) 5%, var(--color-hl-4b) 100%);
-        background-color: var(--color-hl-4);
+        background: linear-gradient(to bottom, var(--color-yellow) 5%, var(--color-yellow-1) 100%);
+        background-color: var(--color-yellow);
       }
 
       &:active {

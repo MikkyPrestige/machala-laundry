@@ -30,7 +30,7 @@ const Gallery = () => {
       <header className="gallery--header">
         <h1 className="gallery--header__title">Our amazing works</h1>
         <p className="gallery--header__subtitle">
-          Thats why you can trust <em>Machala Laundry Service</em> to take care
+          This is why you can trust <em>Machala Laundry Service</em> to take care
           of your laundry with care.
         </p>
       </header>

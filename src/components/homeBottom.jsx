@@ -142,9 +142,7 @@ const HomeBottom = () => {
             </figure>
           </div>
         </div>
-        <div className="work--order">
-          <button className="work--order__btn">Order Now</button>
-        </div>
+        <button className="work--btn">Order Now</button>
       </section>
     </section>
   );

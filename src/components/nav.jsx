@@ -8,7 +8,6 @@ import {
 import { FiMenu } from "react-icons/fi";
 import { RiHomeHeartFill } from "react-icons/ri";
 import { FcAbout } from "react-icons/fc";
-import { TbBrandBooking } from "react-icons/tb";
 // import Logo from "../assets/images/logo.jpeg";
 // import Avatar from "./avatar";
 
@@ -22,8 +21,9 @@ const Layout = () => {
 
 const CustomNavLink = ({ to, ...props }) => {
   let activeStyle = {
-    color: "#00ff7f",
-    fontWeight: "bold",
+    background:
+      "radial-gradient(circle at center center, #00E0F7 0%, #64F38C 100%)",
+    backgroundClip: "text",
   };
 
   return (
@@ -80,7 +80,7 @@ const LayoutSmall = () => {
                   className="layoutSmall--header__nav--lists__item"
                 >
                   <RiHomeHeartFill className="layoutSmall--header__nav--lists__item--icon" />
-                  Home
+                  <span>Home</span>
                 </CustomNavLink>
               </li>
               <li>
@@ -90,7 +90,7 @@ const LayoutSmall = () => {
                   className="layoutSmall--header__nav--lists__item"
                 >
                   <FcAbout className="layoutSmall--header__nav--lists__item--icon" />
-                  About Us
+                  <span>About Us</span>
                 </CustomNavLink>
               </li>
               <li>
@@ -100,7 +100,7 @@ const LayoutSmall = () => {
                   className="layoutSmall--header__nav--lists__item"
                 >
                   <MdOutlineLocalLaundryService className="layoutSmall--header__nav--lists__item--icon" />
-                  Our Office
+                  <span>Locations</span>
                 </CustomNavLink>
               </li>
               <li>
@@ -110,19 +110,9 @@ const LayoutSmall = () => {
                   className="layoutSmall--header__nav--lists__item"
                 >
                   <MdContactPhone className="layoutSmall--header__nav--lists__item--icon" />
-                  Book Us
+                  <span>Book Us</span>
                 </CustomNavLink>
               </li>
-              {/* <li>
-                <CustomNavLink
-                  to="/login"
-                  onClick={handleNavToggleClose}
-                  className="layoutSmall--header__nav--lists__item"
-                >
-                  <TbBrandBooking className="layoutSmall--header__nav--lists__item--icon" />
-                  Book Us
-                </CustomNavLink>
-              </li> */}
             </ul>
           </nav>
         </div>
