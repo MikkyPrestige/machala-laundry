@@ -1,5 +1,5 @@
 import React from "react";
-import Avatar from "./avatar";
+import Avatar from "../components/avatar";
 import Logo from "../assets/images/logo.jpeg";
 import { GoLocation } from "react-icons/go";
 import { GiRotaryPhone } from "react-icons/gi";

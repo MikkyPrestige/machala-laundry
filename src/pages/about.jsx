@@ -1,12 +1,12 @@
 import React from "react";
-import Layout from "../components/nav";
+import Layout from "../layout/nav";
 import Shirt from "../assets/images/shirt.svg";
 import Avatar from "../components/avatar";
 import Delivery from "../assets/images/delivery-boy.jpg";
 import Cloth from "../assets/images/dryClean.svg";
 import WashingMachine from "../assets/images/washing-machine.svg";
 import Iron from "../assets/images/dry-cleaner.svg";
-import Footer from "../components/footer";
+import Footer from "../layout/footer";
 
 const About = () => {
   return (

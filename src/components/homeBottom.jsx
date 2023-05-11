@@ -24,7 +24,7 @@ const HomeBottom = () => {
               <Avatar
                 image={Delivery}
                 alt="Pick up and Delivery"
-                style={{ width: "100%", borderRadius: "50%" }}
+                style={{ width: "100%", height: "100%", borderRadius: "50%" }}
               />
             </div>
             <figcaption className="work--content__item--wrapper">
@@ -41,7 +41,7 @@ const HomeBottom = () => {
               <Avatar
                 image={Affordable}
                 alt="Affordable"
-                style={{ width: "100%", borderRadius: "50%" }}
+                style={{ width: "100%", height: "100%", borderRadius: "50%" }}
               />
             </div>
             <figcaption className="work--content__item--wrapper">
@@ -58,7 +58,7 @@ const HomeBottom = () => {
               <Avatar
                 image={Medal}
                 alt="First Place"
-                style={{ width: "100%", borderRadius: "50%" }}
+                style={{ width: "100%", height: "100%", borderRadius: "50%" }}
               />
             </div>
             <figcaption className="work--content__item--wrapper">

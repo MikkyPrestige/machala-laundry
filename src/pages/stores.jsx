@@ -3,8 +3,8 @@ import Avatar from "../components/avatar";
 import Location from "../assets/images/business-location.svg";
 import Call from "../assets/images/call-center.png";
 import Time from "../assets/images/work-time.svg";
-import Layout from "../components/nav";
-import Footer from "../components/footer";
+import Layout from "../layout/nav";
+import Footer from "../layout/footer";
 
 const Stores = () => {
   return (

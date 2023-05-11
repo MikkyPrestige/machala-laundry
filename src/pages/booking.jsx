@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../components/nav";
+import Layout from "../layout/nav";
 import washingMachine from "../assets/images/machine1.png";
 import Avatar from "../components/avatar";
-import Footer from "../components/footer";
+import Footer from "../layout/footer";
 
 const Booking = () => {
   return (

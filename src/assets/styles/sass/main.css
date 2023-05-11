@@ -50,8 +50,38 @@
 }
 
 html {
-  font-size: 50%;
+  font-size: 45%;
   scroll-behavior: smooth;
+}
+@media only screen and (min-width: 30.063em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 37.55em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (min-width: 48em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  html {
+    font-size: 68.75%;
+  }
+}
+@media only screen and (min-width: 75em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 87.5%;
+  }
 }
 
 body {

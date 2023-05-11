@@ -1,5 +1,4 @@
 // GOOGLE REVIEW COMPONENT
-
 import React from "react";
 
 const Reviews = () => {
