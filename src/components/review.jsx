@@ -1,7 +1,18 @@
 // GOOGLE REVIEW COMPONENT
-import React from "react";
+import { React, useState } from "react";
+import Estimate from "./estimate";
 
 const Reviews = () => {
+  const [isEstimateOpen, setIsEstimateOpen] = useState(false);
+
+  const handleEstimateToggleOpen = () => {
+    setIsEstimateOpen(true);
+  };
+
+  const handleEstimateToggleClose = () => {
+    setIsEstimateOpen(false);
+  };
+
   return (
     <section className="reviews">
       <div className="review">
@@ -20,9 +31,14 @@ const Reviews = () => {
           The freedom of choosing your preferred laundry service provider from
           our any of different branches
         </p>
-        <button type="submit" className="request--btn">
+        <button
+          type="submit"
+          className="request--btn"
+          onClick={handleEstimateToggleOpen}
+        >
           Get an Estimate
         </button>
+        {isEstimateOpen && <Estimate onClose={handleEstimateToggleClose} />}
       </div>
     </section>
   );

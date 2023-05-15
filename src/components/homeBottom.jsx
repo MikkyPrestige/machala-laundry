@@ -6,8 +6,15 @@ import Medal from "../assets/gif/first-place-badge.gif";
 import Collect from "../assets/images/delivery-guy-with-parcel-on-bike.svg";
 import WashMachine from "../assets/images/laundry.svg";
 import deliver from "../assets/images/courier-guy-holding-parcel.svg";
+import { useNavigate } from "react-router-dom";
 
 const HomeBottom = () => {
+  const navigate = useNavigate();
+
+  const order = () => {
+    navigate("/booking");
+  };
+
   return (
     <section className="homeBottom">
       <section className="work paddingTop-lg">
@@ -72,7 +79,7 @@ const HomeBottom = () => {
           </figure>
         </div>
       </section>
-      <section className="work paddingTop-sm">
+      <section className="work paddingTop-sm light-blue-bg">
         <div className="work--header">
           <h1 className="work--header__title">How Machala Laundry Works</h1>
           <p className="work--header__subtitle">
@@ -142,7 +149,9 @@ const HomeBottom = () => {
             </figure>
           </div>
         </div>
-        <button className="work--btn">Order Now</button>
+        <button onClick={order} className="work--btn">
+          Order Now
+        </button>
       </section>
     </section>
   );

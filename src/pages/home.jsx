@@ -4,8 +4,15 @@ import Footer from "../layout//footer";
 import HomeBottom from "../components/homeBottom";
 import Reviews from "../components/review";
 import Gallery from "../components/gallery";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const order = () => {
+    navigate("/booking");
+  };
+
   return (
     <main>
       <section className="home">
@@ -25,7 +32,9 @@ const Home = () => {
               click.
             </p>
           </div>
-          <button className="home--content__btn">Request a service</button>
+          <button onClick={order} className="home--content__btn">
+            Request a service
+          </button>
         </section>
       </section>
       <HomeBottom />
