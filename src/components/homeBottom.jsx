@@ -4,7 +4,7 @@ import Delivery from "../assets/gif/delivery-boy.gif";
 import Affordable from "../assets/gif/shopping.gif";
 import Medal from "../assets/gif/first-place-badge.gif";
 import Collect from "../assets/images/delivery-guy-with-parcel-on-bike.svg";
-import Clean from "../assets/images/laundry.svg";
+import WashMachine from "../assets/images/laundry.svg";
 import deliver from "../assets/images/courier-guy-holding-parcel.svg";
 
 const HomeBottom = () => {
@@ -37,7 +37,7 @@ const HomeBottom = () => {
             </figcaption>
           </figure>
           <figure className="work--content__item">
-            <div className="whyUs--content__item--avatar">
+            <div className="work--content__item--avatar">
               <Avatar
                 image={Affordable}
                 alt="Affordable"
@@ -107,14 +107,14 @@ const HomeBottom = () => {
             <figure className="work--content2__items__item">
               <div className="work--content2__items__item--avatar">
                 <Avatar
-                  image={Clean}
+                  image={WashMachine}
                   alt="Washing Machine Image"
                   style={{ width: "100%", height: "100%" }}
                 />
               </div>
               <figcaption className="work--content2__items__item--text">
                 <h3 className="work--content2__items__item--text__title">
-                  We clean
+                  We Wash
                 </h3>
                 <p className="work--content2__items__item--text__subtitle">
                   We use the best quality products and clean your laundry with

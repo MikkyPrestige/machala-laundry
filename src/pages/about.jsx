@@ -109,7 +109,7 @@ const About = () => {
               <Avatar
                 image={Delivery}
                 alt="Delivery man icon"
-                style={{ width: "100%", height: "100%" }}
+                style={{ width: "100%", height: "100%", objectFit: "contain" }}
               />
             </div>
             <h2 className="services--content__item--title">Delivery Service</h2>

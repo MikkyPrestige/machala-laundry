@@ -4,35 +4,35 @@
   background-color: var(--color-white-rgb);
   color: var(--color-black);
   padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-col;
   gap: 3rem;
 
   &--container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    @include flex-col;
+    gap: 1rem;
+
+    @include respond(tab-land) {
+      @include space-btw;
+      width: 100%;
+    }
   }
 
   &--logo {
-    width: 85%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 0 1rem;
+    width: 80%;
+    height: 10rem;
+
+    @include respond(phone-normal) {
+      height: 15rem;
+    }
+
+    @include respond(tab-land) {
+      width: 30%;
+      height: 10rem;
+    }
   }
 
   &--social {
-    flex-basis: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-col;
     gap: .5rem;
 
     &__title {
@@ -54,10 +54,7 @@
 
       &--header {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex-col;
         gap: 1rem;
 
         &__title {
@@ -66,12 +63,20 @@
           text-align: center;
         }
 
+        &__para {
+          @include flex-col;
+          gap: 1rem;
+
+          @include respond(desktop) {
+            @include space-btw;
+          }
+        }
+
         &__text {
           font-size: var(--font-size-lg);
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include flex-row;
           gap: .5rem;
+          text-align: center;
 
           &--link,
           &:link,
@@ -92,9 +97,7 @@
       }
 
       &--item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-row;
         gap: 2rem;
 
         &--icon {

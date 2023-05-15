@@ -2,20 +2,18 @@
   color: var(--color-white-rgb);
   margin-top: 3rem;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flex-col;
   gap: 2rem;
   width: 100%;
   height: 100%;
 
+  @include respond(tab-land) {
+    padding: 5rem;
+  }
+
   &--header {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-col;
     gap: 1rem;
 
     &__title {
@@ -26,20 +24,22 @@
     }
 
     &__avatar {
-      width: 15rem;
-      height: 15rem;
+      width: 30%;
+      height: 10rem;
       border-radius: 1rem;
       padding: 1rem;
       background-color: var(--color-blue-2);
+
+      @include respond(phone-normal) {
+        height: 15rem;
+      }
     }
   }
 
   &--container {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-col;
     gap: 1rem;
 
     &__subtitle {
@@ -51,17 +51,14 @@
     }
 
     &--form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include flex-col;
       gap: 2rem;
-      width: 80%;
+      max-width: 50rem;
+      width: 100%;
       height: 100%;
 
       &__group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-col;
         gap: .5rem;
         width: 100%;
 
@@ -90,9 +87,7 @@
       }
 
       &__check {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-col;
         gap: 2rem;
         width: 100%;
         height: 100%;
@@ -102,10 +97,7 @@
 
         &--header {
           width: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          @include flex-row;
           gap: 1rem;
 
           &__title {
@@ -128,9 +120,7 @@
         &--content {
           width: 100%;
           height: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
+          @include align-start;
           gap: 1rem;
 
           &__group {
@@ -138,8 +128,7 @@
             height: 100%;
 
             &__label {
-              display: flex;
-              align-items: center;
+              @include align-center;
               gap: 1rem;
               width: 100%;
               height: 100%;

@@ -1,18 +1,18 @@
 .stores {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flex-col;
   gap: 2rem;
-  padding: 3rem;
+  padding: 5rem 3rem;
   height: 100%;
   width: 100%;
   background-color: var(--color-blue-lt);
 
+  @include respond(tab-land) {
+    padding-top: 8rem;
+  }
+
   &--intro {
     width: 100%;
     height: 100%;
-    margin-top: .5rem;
 
     &__text {
       font-size: var(--font-size-xxl);
@@ -24,16 +24,23 @@
   }
 
   &--container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex-col;
     gap: 2rem;
     padding: 3rem;
     height: 100%;
     width: 100%;
     background-color: var(--color--white-lt);
     border-radius: 1rem;
+
+    &__flex {
+      @include flex-col;
+      gap: 2rem;
+      width: 100%;
+
+      @include respond(tab-land) {
+        @include flex-row;
+      }
+    }
 
     &__header {
       align-self: flex-start;
@@ -42,7 +49,6 @@
 
       &--title {
         font-size: var(--font-size-lg);
-        font-weight: var(--font-weight-bd);
         color: var(--color-blue-2);
         text-transform: uppercase;
         margin-bottom: 1rem;
@@ -50,7 +56,6 @@
 
       &--subtitle {
         font-size: var(--font-size-xxxl);
-        font-weight: var(--font-weight-bd);
         color: var(--color-black-rgba);
         text-transform: capitalize;
         text-align: justify;
@@ -59,11 +64,12 @@
     }
 
     &__body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include flex-col;
       gap: 2rem;
+
+      @include respond(tab-land) {
+        flex-basis: 40%;
+      }
 
       &--title {
         font-size: var(--font-size-xxl);
@@ -84,16 +90,11 @@
       }
 
       &--content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
+        @include align-start;
         gap: 1rem;
 
         &__item {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include flex-row;
           gap: 1rem;
 
           &--avatar {
@@ -147,6 +148,11 @@
     &__map {
       width: 100%;
       height: 40rem;
+
+      @include respond(tab-land) {
+        flex-basis: 60%;
+        height: 30rem;
+      }
 
       &--frame {
         width: 100%;

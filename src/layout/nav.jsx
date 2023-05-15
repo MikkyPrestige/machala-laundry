@@ -8,22 +8,21 @@ import {
 import { FiMenu } from "react-icons/fi";
 import { RiHomeHeartFill } from "react-icons/ri";
 import { FcAbout } from "react-icons/fc";
-// import Logo from "../assets/images/logo.jpeg";
-// import Avatar from "./avatar";
 
 const Layout = () => {
   return (
     <div className="layout">
       <LayoutSmall />
+      <LayoutLarge />
     </div>
   );
 };
 
 const CustomNavLink = ({ to, ...props }) => {
   let activeStyle = {
-    background:
-      "radial-gradient(circle at center center, #00E0F7 0%, #64F38C 100%)",
-    backgroundClip: "text",
+    // background:
+    //   "radial-gradient(circle at center center, #00E0F7 0%, #64F38C 100%)",
+    // backgroundClip: "text",
   };
 
   return (
@@ -47,77 +46,96 @@ const LayoutSmall = () => {
   };
 
   return (
-    <section className="layoutSmall">
-      <header className="layoutSmall--header">
-        <div className="layoutSmall--header__logo">
-          {/* <Avatar
-            image={Logo}
-            alt="logo"
-            style={{ width: "100%", height: "100%", borderRadius: "1rem" }}
-          /> */}
-        </div>
-        <div className="layoutSmall--header__nav">
-          <button
-            className="layoutSmall--header__nav__toggle"
-            onClick={handleNavToggleOpen}
-          >
-            {isNavOpen ? (
-              <MdClose className="layoutSmall--header__nav__toggle--icon" />
-            ) : (
-              <FiMenu className="layoutSmall--header__nav__toggle--icon" />
-            )}
-          </button>
-          <nav
-            className={`layoutSmall--header__nav--links ${
-              isNavOpen ? "layoutSmall--header__nav--links--open" : ""
-            }`}
-          >
-            <ul className="layoutSmall--header__nav--lists">
-              <li>
-                <CustomNavLink
-                  to="/"
-                  onClick={handleNavToggleClose}
-                  className="layoutSmall--header__nav--lists__item"
-                >
-                  <RiHomeHeartFill className="layoutSmall--header__nav--lists__item--icon" />
-                  <span>Home</span>
-                </CustomNavLink>
-              </li>
-              <li>
-                <CustomNavLink
-                  to="/about"
-                  onClick={handleNavToggleClose}
-                  className="layoutSmall--header__nav--lists__item"
-                >
-                  <FcAbout className="layoutSmall--header__nav--lists__item--icon" />
-                  <span>About Us</span>
-                </CustomNavLink>
-              </li>
-              <li>
-                <CustomNavLink
-                  to="/stores"
-                  onClick={handleNavToggleClose}
-                  className="layoutSmall--header__nav--lists__item"
-                >
-                  <MdOutlineLocalLaundryService className="layoutSmall--header__nav--lists__item--icon" />
-                  <span>Locations</span>
-                </CustomNavLink>
-              </li>
-              <li>
-                <CustomNavLink
-                  to="/booking"
-                  onClick={handleNavToggleClose}
-                  className="layoutSmall--header__nav--lists__item"
-                >
-                  <MdContactPhone className="layoutSmall--header__nav--lists__item--icon" />
-                  <span>Book Us</span>
-                </CustomNavLink>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-    </section>
+    <div className="layoutSmall">
+      <button className="layoutSmall--toggle" onClick={handleNavToggleOpen}>
+        {isNavOpen ? (
+          <MdClose className="layoutSmall--toggle--icon" />
+        ) : (
+          <FiMenu className="layoutSmall--toggle--icon" />
+        )}
+      </button>
+      <nav
+        className={`layoutSmall--nav ${
+          isNavOpen ? "layoutSmall--nav--open" : ""
+        }`}
+      >
+        <ul className="layoutSmall--nav__lists">
+          <li>
+            <CustomNavLink
+              to="/"
+              onClick={handleNavToggleClose}
+              className="layoutSmall--nav__lists__item"
+            >
+              <RiHomeHeartFill className="layoutSmall--nav__lists__item--icon" />
+              <span>Home</span>
+            </CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink
+              to="/about"
+              onClick={handleNavToggleClose}
+              className="layoutSmall--nav__lists__item"
+            >
+              <FcAbout className="layoutSmall--nav__lists__item--icon" />
+              <span>About Us</span>
+            </CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink
+              to="/stores"
+              onClick={handleNavToggleClose}
+              className="layoutSmall--nav__lists__item"
+            >
+              <MdOutlineLocalLaundryService className="layoutSmall--nav__lists__item--icon" />
+              <span>Locations</span>
+            </CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink
+              to="/booking"
+              onClick={handleNavToggleClose}
+              className="layoutSmall--nav__lists__item"
+            >
+              <MdContactPhone className="layoutSmall--nav__lists__item--icon" />
+              <span>Book Us</span>
+            </CustomNavLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
+
+const LayoutLarge = () => {
+  return (
+    <nav className="layoutLarge">
+      <ul className="layoutLarge--lists">
+        <li>
+          <CustomNavLink to="/" className="layoutLarge--lists__item">
+            <RiHomeHeartFill className="layoutLarge--lists__item--icon" />
+            <span>Home</span>
+          </CustomNavLink>
+        </li>
+        <li>
+          <CustomNavLink to="/about" className="layoutLarge--lists__item">
+            <FcAbout className="layoutLarge--lists__item--icon" />
+            <span>About Us</span>
+          </CustomNavLink>
+        </li>
+        <li>
+          <CustomNavLink to="/stores" className="layoutLarge--lists__item">
+            <MdOutlineLocalLaundryService className="layoutLarge--lists__item--icon" />
+            <span>Locations</span>
+          </CustomNavLink>
+        </li>
+        <li>
+          <CustomNavLink to="/booking" className="layoutLarge--lists__item">
+            <MdContactPhone className="layoutLarge--lists__item--icon" />
+            <span>Book Us</span>
+          </CustomNavLink>
+        </li>
+      </ul>
+    </nav>
   );
 };
 
