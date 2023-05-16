@@ -7,10 +7,18 @@ import Cloth from "../assets/images/dryClean.svg";
 import WashingMachine from "../assets/images/washing-machine.svg";
 import Iron from "../assets/images/dry-cleaner.svg";
 import Footer from "../layout/footer";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <section className="wrapper">
+      <Helmet>
+        <title>Machala Laundry | About Us</title>
+        <meta
+          name="description"
+          content="We render modern, fast, and friendly service"
+        />
+      </Helmet>
       <Layout />
       <section className="about">
         <div className="about--head">
@@ -102,7 +110,7 @@ const About = () => {
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
-            <h2 className="services--content__item--title">Self Service</h2>
+            <h2 className="services--content__item--title">Bulk Service</h2>
           </div>
           <div className="services--content__item">
             <div className="services--content__item--avatar">

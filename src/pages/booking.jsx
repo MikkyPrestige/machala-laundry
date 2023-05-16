@@ -1,12 +1,106 @@
-import React from "react";
+import { React, useState } from "react";
 import Layout from "../layout/nav";
 import washingMachine from "../assets/images/machine1.png";
 import Avatar from "../components/avatar";
 import Footer from "../layout/footer";
+// import { database, ref, set } from "../config";
+import { Helmet } from "react-helmet";
 
 const Booking = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    pickupAddress: "",
+    deliveryAddress: "",
+    pickupDateTime: "",
+    deliveryDateTime: "",
+    serviceType: "",
+    instruction: "",
+  });
+  const [error, setError] = useState({});
+  const [success, setSuccess] = useState(false);
+  const [successName, setSuccessName] = useState("");
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const reset = () => {
+    setForm({
+      name: "",
+      email: "",
+      phoneNumber: "",
+      pickupAddress: "",
+      deliveryAddress: "",
+      pickupDateTime: "",
+      deliveryDateTime: "",
+      serviceType: "",
+      instruction: "",
+    });
+  };
+
+  const validateForm = () => {
+    let errors = {};
+    let isValid = true;
+
+    if (!form.name.trim()) {
+      isValid = false;
+      errors["name"] = "Please enter your name";
+    } else if (!/\S+@\S+\.\S+/.test(form.email.trim())) {
+      isValid = false;
+      errors["email"] = "Please enter a valid email address";
+    } else if (!form.phoneNumber.trim()) {
+      isValid = false;
+      errors["phoneNumber"] = "Please enter your phone number";
+    } else if (!form.serviceType.trim()) {
+      isValid = false;
+      errors["serviceType"] = "Please select a service type";
+    }
+    setError(errors);
+    return isValid;
+  };
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      // sendMessage(form);
+      console.log(form);
+      setSuccess(true);
+      setSuccessName(form.name);
+      reset();
+    }
+  };
+
+  // SEND FORM DATA TO FIREBASE
+  // const sendMessage = (form) => {
+  //   set(ref(database, "orders/" + Math.floor(Math.random() * 10000000)), {
+  //     name: form.name,
+  //     email: form.email,
+  //     phoneNumber: form.phoneNumber,
+  //     pickupAddress: form.pickupAddress,
+  //     deliveryAddress: form.deliveryAddress,
+  //     pickupDateTime: form.pickupDateTime,
+  //     deliveryDateTime: form.deliveryDateTime,
+  //     serviceType: form.serviceType,
+  //     instruction: form.instruction,
+  //   });
+  // };
+
+  // REMOVE POPUP
+  const removePopup = () => {
+    setSuccess(false);
+  };
+
   return (
     <section className="wrapper">
+      <Helmet>
+        <title>Machala Laundry | Booking</title>
+        <meta name="description" content="Place booking orders here" />
+      </Helmet>
       <Layout />
       <div className="booking">
         <header className="booking--header">
@@ -25,23 +119,40 @@ const Booking = () => {
           <p className="booking--container__subtitle">
             Fill the form below to book a service with us
           </p>
-          <form className="booking--container--form">
+          {success && (
+            <div className="booking--popup">
+              <h2 className="booking--popup__title">
+                Thank you <strong>{successName}</strong>!
+              </h2>
+              <p className="booking--popup__text">
+                Your order has been received. We will get back to you as soon as
+                possible.
+              </p>
+              <button className="booking--popup__btn" onClick={removePopup}>
+                Close
+              </button>
+            </div>
+          )}
+          <form className="booking--container--form" onSubmit={submitForm}>
             <div className="booking--container--form__group">
               <label
-                htmlFor="full-name"
+                htmlFor="name"
                 className="booking--container--form__group--label"
               >
-                Full Name
+                Name
               </label>
               <input
                 type="text"
-                name="full-name"
-                id="full-name"
+                name="name"
+                id="name"
                 className="booking--container--form__group--input"
-                placeholder="full name"
+                placeholder="name"
                 autoComplete="name"
                 enterKeyHint="next"
+                value={form.name}
+                onChange={handleChange}
               />
+              <p className="booking--container--form__error">{error.name}</p>
             </div>
             <div className="booking--container--form__group">
               <label
@@ -58,24 +169,32 @@ const Booking = () => {
                 placeholder="email (username@example.com)"
                 autoComplete="email"
                 enterKeyHint="next"
+                value={form.email}
+                onChange={handleChange}
               />
+              <p className="booking--container--form__error">{error.email}</p>
             </div>
             <div className="booking--container--form__group">
               <label
-                htmlFor="phone-number"
+                htmlFor="phoneNumber"
                 className="booking--container--form__group--label"
               >
                 Phone Number
               </label>
               <input
                 type="tel"
-                name="phone-number"
-                id="phone-number"
+                name="phoneNumber"
+                id="phoneNumber"
                 className="booking--container--form__group--input"
                 placeholder="phone number"
                 autoComplete="tel"
                 enterKeyHint="next"
+                value={form.phoneNumber}
+                onChange={handleChange}
               />
+              <p className="booking--container--form__error">
+                {error.phoneNumber}
+              </p>
             </div>
             <div className="booking--container--form__group">
               <label
@@ -86,12 +205,14 @@ const Booking = () => {
               </label>
               <input
                 type="text"
-                name="pickup-address"
-                id="pickup-address"
+                name="pickupAddress"
+                id="pickupAddress"
                 enterKeyHint="next"
                 autoComplete="pickup-address"
                 className="booking--container--form__group--input"
                 placeholder="street address"
+                onChange={handleChange}
+                value={form.pickupAddress}
               />
             </div>
             <div className="booking--container--form__group">
@@ -103,12 +224,14 @@ const Booking = () => {
               </label>
               <input
                 type="text"
-                name="delivery-address"
-                id="delivery-address"
+                name="deliveryAddress"
+                id="deliveryAddress"
                 enterKeyHint="next"
                 autoComplete="delivery-address"
                 className="booking--container--form__group--input"
                 placeholder="street address"
+                onChange={handleChange}
+                value={form.deliveryAddress}
               />
             </div>
             <div className="booking--container--form__group">
@@ -120,9 +243,11 @@ const Booking = () => {
               </label>
               <input
                 type="datetime-local"
-                name="pickup-date-time"
-                id="pickup-date-time"
+                name="pickupDateTime"
+                id="pickupDateTime"
                 className="booking--container--form__group--input"
+                onChange={handleChange}
+                value={form.pickupDateTime}
               />
             </div>
             <div className="booking--container--form__group">
@@ -134,9 +259,11 @@ const Booking = () => {
               </label>
               <input
                 type="datetime-local"
-                name="delivery-date-time"
-                id="delivery-date-time"
+                name="deliveryDateTime"
+                id="deliveryDateTime"
                 className="booking--container--form__group--input"
+                onChange={handleChange}
+                value={form.deliveryDateTime}
               />
             </div>
             <div className="booking--container--form__group">
@@ -147,18 +274,20 @@ const Booking = () => {
                 Service Type
               </label>
               <select
-                name="service-type"
-                id="service-type"
+                name="serviceType"
+                id="serviceType"
                 className="booking--container--form__group--input"
-                defaultValue=""
+                onChange={handleChange}
+                value={form.serviceType}
               >
-                <option value="" disabled>
-                  choose a service ...
-                </option>
+                <option value="">choose a service ...</option>
                 <option value="wash">Wash</option>
                 <option value="iron">Iron</option>
                 <option value="wash and iron">Wash and Iron</option>
               </select>
+              <p className="booking--container--form__error">
+                {error.serviceType}
+              </p>
             </div>
             <div className="booking--container--form__check">
               <div className="booking--container--form__check--header">
@@ -225,6 +354,8 @@ const Booking = () => {
                   name="instruction"
                   id="instruction"
                   placeholder="Please specify any special instructions or requests here"
+                  onChange={handleChange}
+                  value={form.instruction}
                 ></textarea>
               </div>
             </div>

@@ -1,11 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-// import { lazy } from "react";
-import Home from "../pages/home";
-import About from "../pages/about";
-import Stores from "../pages/stores";
-import Booking from "../pages/booking";
-// const Home = lazy(() => import("../components/home"));
+import { lazy } from "react";
+const Home = lazy(() => import("../pages/home"));
+const About = lazy(() => import("../pages/about"));
+const Stores = lazy(() => import("../pages/stores"));
+const Booking = lazy(() => import("../pages/booking"));
 
 const AppRouter = () => {
   return (

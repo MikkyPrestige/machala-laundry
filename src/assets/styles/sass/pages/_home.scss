@@ -96,11 +96,6 @@
 
     &__btn {
       padding: 1.5rem 2rem;
-      font-family: var(--font-family);
-      font-size: var(--font-size-lg);
-      font-weight: var(--font-weight-bd);
-      text-transform: uppercase;
-      letter-spacing: 1px;
       border: none;
       border-radius: .5rem;
       border: 1px solid var(--color-yellow);
@@ -109,7 +104,6 @@
       background: linear-gradient(to bottom, var(--color-yellow-1) 5%, var(--color-yellow) 100%);
       background-color: var(--color-yellow-1);
       display: inline-block;
-      cursor: pointer;
       z-index: 5;
       animation: heartbeat 1.5s steps(5, start) infinite alternate-reverse both;
 
@@ -121,6 +115,19 @@
       &:active {
         position: relative;
         top: 1px;
+      }
+
+      a,
+      a:link,
+      a:visited,
+      a:active {
+        font-family: var(--font-family);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-bd);
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px;
+        cursor: pointer;
       }
     }
   }

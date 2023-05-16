@@ -4,17 +4,18 @@ import Footer from "../layout//footer";
 import HomeBottom from "../components/homeBottom";
 import Reviews from "../components/review";
 import Gallery from "../components/gallery";
-import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
-  const navigate = useNavigate();
-
-  const order = () => {
-    navigate("/booking");
-  };
-
   return (
     <main>
+      <Helmet>
+        <title>Machala Laundry</title>
+        <meta
+          name="description"
+          content="Machala Laundry is the place for your washing, ironing, and folding of laundries"
+        />
+      </Helmet>
       <section className="home">
         <Layout />
         <div className="home--bg overflow">
@@ -32,8 +33,8 @@ const Home = () => {
               click.
             </p>
           </div>
-          <button onClick={order} className="home--content__btn">
-            Request a service
+          <button className="home--content__btn">
+            <a href="tel: +2347061516180">Request a service</a>
           </button>
         </section>
       </section>

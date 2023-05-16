@@ -5,10 +5,15 @@ import Call from "../assets/images/call-center.png";
 import Time from "../assets/images/work-time.svg";
 import Layout from "../layout/nav";
 import Footer from "../layout/footer";
+import { Helmet } from "react-helmet";
 
 const Stores = () => {
   return (
     <section className="wrapper">
+      <Helmet>
+        <title>Machala Laundry | Stores</title>
+        <meta name="description" content="Machala Laundry physical locations" />
+      </Helmet>
       <Layout />
       <section className="stores">
         <div className="stores--intro">

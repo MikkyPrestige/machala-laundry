@@ -89,16 +89,21 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
+  font-weight: var(--font-weight-nl);
   line-height: 1.5;
   background-color: var(--color-white-rgba);
   color: var(--color-black-rgba);
   min-height: 100%;
-  width: 100%;
+  min-width: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
 }
 
 .paddingTop-lg {
@@ -386,11 +391,6 @@ code {
 }
 .home--content__btn {
   padding: 1.5rem 2rem;
-  font-family: var(--font-family);
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bd);
-  text-transform: uppercase;
-  letter-spacing: 1px;
   border: none;
   border-radius: 0.5rem;
   border: 1px solid var(--color-yellow);
@@ -399,7 +399,6 @@ code {
   background: linear-gradient(to bottom, var(--color-yellow-1) 5%, var(--color-yellow) 100%);
   background-color: var(--color-yellow-1);
   display: inline-block;
-  cursor: pointer;
   z-index: 5;
   animation: heartbeat 1.5s steps(5, start) infinite alternate-reverse both;
 }
@@ -410,6 +409,18 @@ code {
 .home--content__btn:active {
   position: relative;
   top: 1px;
+}
+.home--content__btn a,
+.home--content__btn a:link,
+.home--content__btn a:visited,
+.home--content__btn a:active {
+  font-family: var(--font-family);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bd);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .homeBottom {
@@ -1000,11 +1011,73 @@ code {
   gap: 2rem;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 @media only screen and (min-width: 48em) {
   .booking {
     padding: 5rem;
   }
+}
+.booking--popup {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 15%;
+  padding: 2rem;
+  background-color: var(--color-white-rgb);
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.4rem #c8d0e7, -1px -1px 0.4rem var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 48em) {
+  .booking--popup {
+    width: 65%;
+  }
+}
+.booking--popup__title {
+  color: var(--color-black-rgba);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bd);
+  text-align: center;
+}
+.booking--popup__title strong {
+  color: var(--color-blue-2);
+  text-transform: capitalize;
+}
+.booking--popup__text {
+  color: var(--color-black-rgba);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-md);
+  text-align: center;
+}
+.booking--popup__btn {
+  width: 15rem;
+  height: 4rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bd);
+  color: #585858;
+  margin-top: 1rem;
+  letter-spacing: 1.5pt;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  background: #efefef;
+  box-shadow: 0.2rem 0.2rem 0.4rem #c8d0e7, -1px -1px 0.4rem var(--color-white);
+}
+.booking--popup__btn:hover {
+  box-shadow: 1px 1px 0.2rem #c8d0e7, -1px -1px 0.2rem var(--color-white);
+}
+.booking--popup__btn:active {
+  box-shadow: inset 1px 1px 0.3rem #c8d0e7, inset -1px -1px 0.3rem var(--color--white);
 }
 .booking--header {
   width: 100%;
@@ -1101,7 +1174,7 @@ code {
 .booking--container--form__check--header {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -1186,6 +1259,13 @@ code {
 }
 .booking--container--form__cta:active {
   box-shadow: inset 1px 1px 0.3rem #c8d0e7, inset -1px -1px 0.3rem var(--color--white);
+}
+.booking--container--form__error {
+  color: var(--color-red-1);
+  font-size: var(--font-size-md);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bd);
+  text-transform: capitalize;
 }
 
 .gallery {
@@ -1465,7 +1545,7 @@ code {
   display: block;
   background-image: linear-gradient(to right, var(--color-blue) 0%, var(--color-red-1) 51%, var(--color-blue) 100%);
   background-size: 200% auto;
-  padding: 1.5rem 2rem;
+  padding: 1rem;
   box-shadow: 0 0 0.2rem #eee;
   border-radius: 1rem;
   border: none;
