@@ -1,6 +1,4 @@
 import React from "react";
-import Avatar from "./avatar";
-import HandShake from "../assets/images/handshake.png";
 import { TbCurrencyNaira } from "react-icons/tb";
 
 const Estimate = ({ onClose }) => {
@@ -302,22 +300,6 @@ const Estimate = ({ onClose }) => {
           </tr>
         </tbody>
       </table>
-      <div className="estimate--note">
-        <div className="estimate--note__avatar">
-          <p className="estimate--note__avatar--text">
-            Thanks for your patronage
-          </p>
-          <Avatar
-            image={HandShake}
-            alt="Hand Shake"
-            style={{ width: "15%", height: "15%" }}
-          />
-        </div>
-        <p className="estimate--note__text">We make you feel brand new!!!</p>
-      </div>
-      <p className="estimate--sign">
-        <em>Signed Management.</em>
-      </p>
       <button onClick={onClose} className="estimate--btn">
         Close
       </button>

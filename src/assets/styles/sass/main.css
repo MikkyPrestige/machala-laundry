@@ -106,6 +106,30 @@ code {
   height: 100vh;
 }
 
+.toggle {
+  position: fixed;
+  top: 0rem;
+  left: 2rem;
+  z-index: 150;
+  width: 30%;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-white-rgba);
+}
+@media only screen and (min-width: 48em) {
+  .toggle {
+    left: 0;
+  }
+}
+.toggle__item {
+  width: 5rem;
+  height: 3rem;
+}
+
 .paddingTop-lg {
   padding-top: 4rem;
 }
@@ -135,7 +159,6 @@ code {
 }
 
 .layoutSmall {
-  padding: 1rem;
   position: relative;
 }
 @media only screen and (min-width: 48em) {
@@ -664,7 +687,6 @@ code {
   justify-content: center;
   align-items: center;
   gap: 7rem;
-  margin-top: 5rem;
 }
 @media only screen and (min-width: 75em) {
   .about {
@@ -672,11 +694,17 @@ code {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    margin-top: 5rem;
   }
 }
 .about--head {
   position: relative;
+  margin-top: 8rem;
+}
+@media only screen and (min-width: 75em) {
+  .about--head {
+    margin-top: 0;
+  }
 }
 .about--head__header {
   width: 70%;
@@ -1002,7 +1030,7 @@ code {
 
 .booking {
   color: var(--color-white-rgb);
-  margin-top: 3rem;
+  background-color: var(--color-black);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -1020,11 +1048,9 @@ code {
 }
 .booking--popup {
   position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 5%;
   width: 100%;
-  height: 15%;
+  height: 25%;
   padding: 2rem;
   background-color: var(--color-white-rgb);
   border-radius: 0.5rem;
@@ -1038,6 +1064,10 @@ code {
   .booking--popup {
     width: 65%;
   }
+}
+.booking--popup__avatar {
+  width: 20%;
+  height: 10rem;
 }
 .booking--popup__title {
   color: var(--color-black-rgba);
@@ -1063,7 +1093,7 @@ code {
   font-size: var(--font-size-lg);
   font-family: var(--font-family);
   font-weight: var(--font-weight-bd);
-  color: #585858;
+  color: var(--color-red);
   margin-top: 1rem;
   letter-spacing: 1.5pt;
   text-transform: uppercase;
@@ -1086,6 +1116,7 @@ code {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding-top: 5rem;
 }
 .booking--header__title {
   color: var(--color-blue-2);
@@ -1358,6 +1389,7 @@ code {
   position: relative;
   width: 100%;
   height: 100%;
+  margin-bottom: 15rem;
 }
 
 .review {
@@ -1399,8 +1431,8 @@ code {
   justify-content: center;
   align-items: center;
   background-color: var(--color-black-rgb);
-  width: 80%;
-  padding: 2rem 1rem;
+  width: 85%;
+  padding: 2rem 0;
 }
 .request--title {
   font-size: var(--font-size-xxxl);
@@ -1518,25 +1550,6 @@ code {
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--color--gray-1);
 }
-.estimate--note {
-  font-family: var(--font-family);
-  text-align: center;
-  color: var(--color-black-rgba);
-  font-size: var(--font-size-xl);
-  padding: 0.5rem;
-}
-.estimate--note__avatar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-.estimate--sign {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bd);
-  margin-bottom: 1rem;
-}
 .estimate--btn {
   color: var(--color-white);
   font-family: var(--font-family);
@@ -1546,6 +1559,7 @@ code {
   background-image: linear-gradient(to right, var(--color-blue) 0%, var(--color-red-1) 51%, var(--color-blue) 100%);
   background-size: 200% auto;
   padding: 1rem;
+  margin-top: 0.5rem;
   box-shadow: 0 0 0.2rem #eee;
   border-radius: 1rem;
   border: none;

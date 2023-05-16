@@ -1,6 +1,6 @@
 .booking {
   color: var(--color-white-rgb);
-  margin-top: 3rem;
+  background-color: var(--color-black);
   padding: 2rem;
   @include flex-col;
   gap: 2rem;
@@ -14,11 +14,9 @@
 
   &--popup {
     position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 5%;
     width: 100%;
-    height: 15%;
+    height: 25%;
     padding: 2rem;
     background-color: var(--color-white-rgb);
     border-radius: .5rem;
@@ -27,6 +25,11 @@
 
     @include respond(tab-land) {
       width: 65%;
+    }
+
+    &__avatar {
+      width: 20%;
+      height: 10rem;
     }
 
     &__title {
@@ -56,7 +59,7 @@
       font-size: var(--font-size-lg);
       font-family: var(--font-family);
       font-weight: var(--font-weight-bd);
-      color: #585858;
+      color: var(--color-red);
       margin-top: 1rem;
       letter-spacing: 1.5pt;
       text-transform: uppercase;
@@ -80,6 +83,8 @@
     width: 100%;
     @include flex-col;
     gap: 1rem;
+    padding-top: 5rem;
+
 
     &__title {
       color: var(--color-blue-2);

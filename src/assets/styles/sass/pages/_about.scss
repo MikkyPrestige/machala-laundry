@@ -9,15 +9,19 @@
   height: 100%;
   @include flex-col;
   gap: 7rem;
-  margin-top: 5rem;
 
   @include respond(desktop) {
     @include flex-row;
-    padding: 2rem;
+    margin-top: 5rem;
   }
 
   &--head {
     position: relative;
+    margin-top: 8rem;
+
+    @include respond(desktop) {
+      margin-top: 0;
+    }
 
     &__header {
       width: 70%;

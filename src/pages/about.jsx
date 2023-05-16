@@ -1,12 +1,10 @@
 import React from "react";
-import Layout from "../layout/nav";
 import Shirt from "../assets/images/shirt.svg";
 import Avatar from "../components/avatar";
 import Delivery from "../assets/images/delivery-boy.jpg";
 import Cloth from "../assets/images/dryClean.svg";
 import WashingMachine from "../assets/images/washing-machine.svg";
 import Iron from "../assets/images/dry-cleaner.svg";
-import Footer from "../layout/footer";
 import { Helmet } from "react-helmet";
 
 const About = () => {
@@ -19,7 +17,6 @@ const About = () => {
           content="We render modern, fast, and friendly service"
         />
       </Helmet>
-      <Layout />
       <section className="about">
         <div className="about--head">
           <header className="about--head__header">
@@ -124,7 +121,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </section>
   );
 };

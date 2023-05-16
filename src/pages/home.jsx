@@ -1,6 +1,4 @@
 import React from "react";
-import Layout from "../layout/nav";
-import Footer from "../layout//footer";
 import HomeBottom from "../components/homeBottom";
 import Reviews from "../components/review";
 import Gallery from "../components/gallery";
@@ -17,7 +15,6 @@ const Home = () => {
         />
       </Helmet>
       <section className="home">
-        <Layout />
         <div className="home--bg overflow">
           <div className="home--bg__img"></div>
         </div>
@@ -41,9 +38,6 @@ const Home = () => {
       <HomeBottom />
       <Gallery />
       <Reviews />
-      <div className="footer--home">
-        <Footer />
-      </div>
     </main>
   );
 };

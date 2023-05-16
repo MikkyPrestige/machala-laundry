@@ -83,25 +83,6 @@
     }
   }
 
-  &--note {
-    font-family: var(--font-family);
-    text-align: center;
-    color: var(--color-black-rgba);
-    font-size: var(--font-size-xl);
-    padding: .5rem;
-
-    &__avatar {
-      @include flex-row;
-      gap: 1rem;
-    }
-  }
-
-  &--sign {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-bd);
-    margin-bottom: 1rem;
-  }
-
   &--btn {
     color: var(--color-white);
     font-family: var(--font-family);
@@ -111,6 +92,7 @@
     background-image: linear-gradient(to right, var(--color-blue) 0%, var(--color-red-1) 51%, var(--color-blue) 100%);
     background-size: 200% auto;
     padding: 1rem;
+    margin-top: .5rem;
     box-shadow: 0 0 .2rem #eee;
     border-radius: 1rem;
     border: none;
