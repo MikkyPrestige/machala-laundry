@@ -27,7 +27,7 @@
 
     &--icon {
       font-size: var(--font-size-home);
-      color: var(--color-black);
+      // color: var(--color-black);
       font-weight: var(--font-weight-md);
     }
 
@@ -48,12 +48,12 @@
     @include flex-col;
     gap: 2rem;
     position: fixed;
-    top: 1rem;
+    top: 0;
     right: 0;
     width: 0;
     max-width: 100%;
     height: 80%;
-    background: linear-gradient(to right, var(--color-white), var(--color-white-rgba));
+    // background: linear-gradient(to right, var(--color-white), var(--color-white-rgba));
     transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -75,18 +75,13 @@
       &__item {
         @include align-center;
         gap: 1rem;
-        font-size: var(--font-size-lg);
-        font-weight: var(--font-weight-md);
-        color: var(--color-black);
         cursor: pointer;
         border-width: 0;
         border-radius: .5rem;
         opacity: 1;
-        padding: 1rem 2rem;
+        padding: 1rem;
         position: relative;
-        text-align: center;
         text-decoration: none;
-        text-transform: uppercase;
         transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1), background-color 100ms cubic-bezier(.694, 0, 0.335, 1), color 100ms cubic-bezier(.694, 0, 0.335, 1);
 
         &::before {
@@ -123,6 +118,16 @@
 
         span {
           z-index: 1;
+          font-size: var(--font-size-xl);
+          font-weight: var(--font-weight-bd);
+          font-family: var(--font-family);
+          text-transform: uppercase;
+          padding: 0 1rem;
+          background: #5468FF;
+          background: radial-gradient(circle farthest-corner at center center, #5468FF 0%, #5ADAFF 25%, #3C4FE0 50%, #f1f1f1 75%, #FF0000 100%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       }
     }
@@ -157,13 +162,18 @@
       &__item {
         @include align-center;
         gap: .5rem;
-        font-size: var(--font-size-lg);
-        font-weight: var(--font-weight-md);
-        color: var(--color-black);
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-bds);
+        font-family: var(--font-family);
         cursor: pointer;
         text-decoration: none;
         text-transform: uppercase;
         padding: 0 1rem;
+        background: #5468FF;
+        background: radial-gradient(circle farthest-corner at center center, #5468FF 0%, #5ADAFF 25%, #3C4FE0 50%, #f1f1f1 75%, #FF0000 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 
         &--icon {
           font-size: var(--font-size-xxxl);

@@ -1,9 +1,16 @@
 import React from "react";
 import { TbCurrencyNaira } from "react-icons/tb";
+/** @jsxImportSource theme-ui */
 
 const Estimate = ({ onClose }) => {
   return (
-    <section className="estimate">
+    <section
+      className="estimate"
+      sx={{
+        backgroundColor: "background",
+        color: "text",
+      }}
+    >
       <header className="estimate--head">
         <h1 className="estimate--head__title">
           Machala Laundry Service price list

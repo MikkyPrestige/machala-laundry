@@ -4,10 +4,17 @@ import Location from "../assets/images/business-location.svg";
 import Call from "../assets/images/call-center.png";
 import Time from "../assets/images/work-time.svg";
 import { Helmet } from "react-helmet";
+/** @jsxImportSource theme-ui */
 
 const Stores = () => {
   return (
-    <section className="stores">
+    <section
+      className="stores"
+      sx={{
+        backgroundColor: "background",
+        color: "text",
+      }}
+    >
       <Helmet>
         <title>Machala Laundry | Stores</title>
         <meta name="description" content="Machala Laundry physical locations" />
@@ -19,12 +26,16 @@ const Stores = () => {
           folding of laundries. We render modern, fast, and friendly services.
         </p>
       </div>
-      <div className="stores--container">
+      <div
+        className="stores--container"
+        sx={{
+          backgroundColor: "secondary",
+          color: "text",
+        }}
+      >
         <header className="stores--container__header">
           <h1 className="stores--container__header--title">Stores</h1>
-          <h2 className="stores--headOffice__header--subtitle">
-            Come visit us
-          </h2>
+          <h2 className="stores--container__header--subtitle">Come visit us</h2>
         </header>
         <div className="stores--container__flex">
           <div className="stores--container__body">
@@ -91,10 +102,16 @@ const Stores = () => {
         </div>
       </div>
 
-      <div className="stores--container">
+      <div
+        className="stores--container"
+        sx={{
+          backgroundColor: "secondary",
+          color: "text",
+        }}
+      >
         <header className="stores--container__header">
           <h1 className="stores--container__header--title">1st Location</h1>
-          <h2 className="stores--headOffice__header--subtitle">
+          <h2 className="stores--container__header--subtitle">
             Good laundry room makes live easier
           </h2>
         </header>

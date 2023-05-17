@@ -1,6 +1,6 @@
 .booking {
-  color: var(--color-white-rgb);
-  background-color: var(--color-black);
+  // color: var(--color-white-rgb);
+  // background-color: var(--color-black);
   padding: 2rem;
   @include flex-col;
   gap: 2rem;
@@ -18,7 +18,7 @@
     width: 100%;
     height: 25%;
     padding: 2rem;
-    background-color: var(--color-white-rgb);
+    // background-color: var(--color-white-rgb);
     border-radius: .5rem;
     box-shadow: .2rem .2rem .4rem #c8d0e7, -1px -1px .4rem var(--color-white);
     @include flex-col;
@@ -33,7 +33,7 @@
     }
 
     &__title {
-      color: var(--color-black-rgba);
+      // color: var(--color-black-rgba);
       font-size: var(--font-size-xxl);
       font-weight: var(--font-weight-bd);
       text-align: center;
@@ -45,7 +45,7 @@
     }
 
     &__text {
-      color: var(--color-black-rgba);
+      // color: var(--color-black-rgba);
       font-size: var(--font-size-lg);
       font-weight: var(--font-weight-md);
       text-align: center;
@@ -113,7 +113,7 @@
     gap: 1rem;
 
     &__subtitle {
-      color: var(--color-blue-lt);
+      // color: var(--color-blue-lt);
       font-size: var(--font-size-lg);
       font-weight: var(--font-weight-md);
       font-family: var(--font-family);
@@ -171,14 +171,14 @@
           gap: 1rem;
 
           &__title {
-            color: var(--color-black-rgba);
+            // color: var(--color-black-rgba);
             font-size: var(--font-size-lg);
             font-weight: var(--font-weight-bds);
             text-transform: uppercase;
           }
 
           &__subtitle {
-            color: var(--color-black-rgba);
+            // color: var(--color-black-rgba);
             font-size: var(--font-size-md);
             font-weight: var(--font-weight-bd);
             font-family: var(--font-family);

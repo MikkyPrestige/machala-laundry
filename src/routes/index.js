@@ -5,6 +5,7 @@ const Home = lazy(() => import("../pages/home"));
 const About = lazy(() => import("../pages/about"));
 const Stores = lazy(() => import("../pages/stores"));
 const Booking = lazy(() => import("../pages/booking"));
+const NotFound = lazy(() => import("../pages/404"));
 
 const AppRouter = ({ colorMode }) => {
   return (
@@ -13,6 +14,7 @@ const AppRouter = ({ colorMode }) => {
       <Route path="/about" element={<About colorMode={colorMode} />} />
       <Route path="/stores" element={<Stores colorMode={colorMode} />} />
       <Route path="/booking" element={<Booking colorMode={colorMode} />} />
+      <Route path="*" element={<NotFound colorMode={colorMode} />} />
     </Routes>
   );
 };

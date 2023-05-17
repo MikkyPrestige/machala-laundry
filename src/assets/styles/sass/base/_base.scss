@@ -44,8 +44,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: var(--font-weight-nl);
   line-height: 1.5;
-  background-color: var(--color-white-rgba);
-  color: var(--color-black-rgba);
+  // background-color: var(--color-white-rgba);
+  // color: var(--color-black-rgba);
   min-height: 100%;
   min-width: 100%;
 }
@@ -69,7 +69,7 @@ code {
   height: 5rem;
   @include flex-row;
   gap: 1rem;
-  background-color: var(--color-white-rgba);
+  // background-color: var(--color-white-rgba);
 
   @include respond(tab-land) {
     left: 0;

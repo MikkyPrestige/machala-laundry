@@ -7,7 +7,7 @@
 
 .review {
   @include flex-col;
-  background-color: var(--color-white-rgb);
+  // background-color: var(--color-white-rgb);
   width: 100%;
   height: 100%;
   margin: 2rem 0;
@@ -15,7 +15,7 @@
   &--title {
     font-size: var(--font-size-xxxl);
     font-weight: var(--font-weight-bd);
-    color: var(--color-black-rgba);
+    // color: var(--color-black-rgba);
     margin: 2rem;
     text-transform: uppercase;
     align-self: flex-start;
@@ -42,7 +42,7 @@
   @include flex-col;
   background-color: var(--color-black-rgb);
   width: 85%;
-  padding: 2rem 0;
+  padding: 1rem;
 
   &--title {
     font-size: var(--font-size-xxxl);

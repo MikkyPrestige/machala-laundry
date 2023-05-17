@@ -5,6 +5,7 @@ import FoldedClothes from "../assets/images/folded-clothes.jpg";
 import WashingMachine from "../assets/images/washing-machine2.jpg";
 import HangedClothes from "../assets/images/hanged-clothes.jpg";
 import PackagedShirts from "../assets/images/package.jpeg";
+/** @jsxImportSource theme-ui */
 
 const Gallery = () => {
   const [images] = useState([
@@ -26,7 +27,12 @@ const Gallery = () => {
   };
 
   return (
-    <section className="gallery">
+    <section className="gallery"
+    sx={{
+      backgroundColor: "background",
+      color: "text",
+    }}
+    >
       <header className="gallery--header">
         <h1 className="gallery--header__title">Our amazing works</h1>
         <p className="gallery--header__subtitle">

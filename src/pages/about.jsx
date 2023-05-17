@@ -6,6 +6,7 @@ import Cloth from "../assets/images/dryClean.svg";
 import WashingMachine from "../assets/images/washing-machine.svg";
 import Iron from "../assets/images/dry-cleaner.svg";
 import { Helmet } from "react-helmet";
+/** @jsxImportSource theme-ui */
 
 const About = () => {
   return (
@@ -17,7 +18,13 @@ const About = () => {
           content="We render modern, fast, and friendly service"
         />
       </Helmet>
-      <section className="about">
+      <section
+        className="about"
+        sx={{
+          backgroundColor: "background",
+          color: "text",
+        }}
+      >
         <div className="about--head">
           <header className="about--head__header">
             <h1 className="about--head__header__title">
@@ -73,7 +80,13 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="services">
+      <section
+        className="services"
+        sx={{
+          backgroundColor: "secondary",
+          color: "text",
+        }}
+      >
         <header className="services--header">
           <h2 className="services--header__title">Services</h2>
           <h3 className="services--header__subtitle">Our various services</h3>

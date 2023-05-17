@@ -4,6 +4,7 @@ import Avatar from "../components/avatar";
 // import { database, ref, set } from "../config";
 import { Helmet } from "react-helmet";
 import HandShake from "../assets/images/handshake.png";
+/** @jsxImportSource theme-ui */
 
 const Booking = () => {
   const [form, setForm] = useState({
@@ -17,7 +18,7 @@ const Booking = () => {
     serviceType: "",
     instruction: "",
   });
-  const [error, setError] = useState({});
+  const [error, setError] = useState([]);
   const [success, setSuccess] = useState(false);
   const [successName, setSuccessName] = useState("");
 
@@ -43,7 +44,7 @@ const Booking = () => {
   };
 
   const validateForm = () => {
-    let errors = {};
+    let errors = [];
     let isValid = true;
 
     if (!form.name.trim()) {
@@ -52,9 +53,13 @@ const Booking = () => {
     } else if (!/\S+@\S+\.\S+/.test(form.email.trim())) {
       isValid = false;
       errors["email"] = "Please enter a valid email address";
-    } else if (!form.phoneNumber.trim()) {
+    } else if (
+      !/^(^\+234|234|^0|0)([7-9]{1})([0|1]{1})([0-9]{8})$/.test(
+        form.phoneNumber.trim()
+      )
+    ) {
       isValid = false;
-      errors["phoneNumber"] = "Please enter your phone number";
+      errors["phoneNumber"] = "Please enter a valid phone number";
     } else if (!form.serviceType.trim()) {
       isValid = false;
       errors["serviceType"] = "Please select a service type";
@@ -95,7 +100,13 @@ const Booking = () => {
   };
 
   return (
-    <section className="booking">
+    <section
+      className="booking"
+      sx={{
+        backgroundColor: "background",
+        color: "text",
+      }}
+    >
       <Helmet>
         <title>Machala Laundry | Booking</title>
         <meta name="description" content="Place booking orders here" />

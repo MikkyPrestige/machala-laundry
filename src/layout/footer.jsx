@@ -6,10 +6,17 @@ import { GiRotaryPhone } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
 import { ImWhatsapp } from "react-icons/im";
 import { SiFacebook, SiMaildotru } from "react-icons/si";
+/** @jsxImportSource theme-ui */
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer
+      className="footer"
+      sx={{
+        backgroundColor: "highlight",
+        color: "text",
+      }}
+    >
       <section className="footer--container">
         <div className="footer--logo">
           <Avatar

@@ -1,6 +1,7 @@
 // GOOGLE REVIEW COMPONENT
 import { React, useState } from "react";
 import Estimate from "./estimate";
+/** @jsxImportSource theme-ui */
 
 const Reviews = () => {
   const [isEstimateOpen, setIsEstimateOpen] = useState(false);
@@ -14,7 +15,12 @@ const Reviews = () => {
   };
 
   return (
-    <section className="reviews">
+    <section className="reviews"
+      sx={{
+        backgroundColor: "background",
+        color: "text",
+      }}
+    >
       <div className="review">
         <h1 className="review--title">Clients Review</h1>
         <div className="review--container">

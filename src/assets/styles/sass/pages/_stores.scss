@@ -4,7 +4,7 @@
   padding: 5rem 3rem;
   height: 100%;
   width: 100%;
-  background-color: var(--color-blue-lt);
+  // background-color: var(--color-blue-lt);
 
   @include respond(tab-land) {
     padding-top: 8rem;
@@ -17,7 +17,7 @@
     &__text {
       font-size: var(--font-size-xxl);
       font-weight: var(--font-weight-md);
-      color: var(--color-black);
+      // color: var(--color-black);
       font-family: var(--font-secondary);
       text-align: justify;
     }
@@ -29,7 +29,7 @@
     padding: 3rem;
     height: 100%;
     width: 100%;
-    background-color: var(--color--white-lt);
+    // background-color: var(--color--white-lt);
     border-radius: 1rem;
 
     &__flex {
@@ -48,15 +48,15 @@
       font-family: var(--font-family);
 
       &--title {
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-md);
         color: var(--color-blue-2);
         text-transform: uppercase;
         margin-bottom: 1rem;
       }
 
       &--subtitle {
-        font-size: var(--font-size-xxxl);
-        color: var(--color-black-rgba);
+        font-size: var(--font-size-lg);
+        // color: var(--color-black-rgba);
         text-transform: capitalize;
         text-align: justify;
         word-spacing: 1rem;
@@ -75,7 +75,7 @@
         font-size: var(--font-size-xxl);
         text-transform: capitalize;
         background: #5468FF;
-        background: radial-gradient(circle farthest-corner at center center, #5468FF 0%, #5ADAFF 25%, #3C4FE0 50%, #000000 75%, #FF0000 100%);
+        background: radial-gradient(circle farthest-corner at center center, #5468FF 0%, #5ADAFF 25%, #3C4FE0 50%, #f1f1f1 75%, #FF0000 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -104,7 +104,7 @@
 
           &--text {
             font-size: var(--font-size-lg);
-            color: var(--color-black);
+            // color: var(--color-black);
           }
         }
       }

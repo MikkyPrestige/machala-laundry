@@ -3,6 +3,7 @@ import HomeBottom from "../components/homeBottom";
 import Reviews from "../components/review";
 import Gallery from "../components/gallery";
 import { Helmet } from "react-helmet";
+/** @jsxImportSource theme-ui */
 
 const Home = () => {
   return (
@@ -14,7 +15,13 @@ const Home = () => {
           content="Machala Laundry is the place for your washing, ironing, and folding of laundries"
         />
       </Helmet>
-      <section className="home">
+      <section
+        className="home"
+        sx={{
+          backgroundColor: "background",
+          color: "text",
+        }}
+      >
         <div className="home--bg overflow">
           <div className="home--bg__img"></div>
         </div>

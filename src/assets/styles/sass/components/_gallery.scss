@@ -10,7 +10,7 @@
     width: 65%;
     height: 100%;
     margin: 2rem 0;
-    color: var(--color-black-rgba);
+    // color: var(--color-black-rgba);
     font-family: var(--font-family);
 
     &__title {
@@ -71,7 +71,7 @@
 
         &:hover {
           background-color: var(--color-black-rgb);
-          color: var(--color-white-rgb);
+          // color: var(--color-white-rgb);
         }
       }
 

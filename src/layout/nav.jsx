@@ -8,6 +8,7 @@ import {
 import { FiMenu } from "react-icons/fi";
 import { RiHomeHeartFill } from "react-icons/ri";
 import { FcAbout } from "react-icons/fc";
+/** @jsxImportSource theme-ui */
 
 const Layout = () => {
   return (
@@ -55,6 +56,10 @@ const LayoutSmall = () => {
         )}
       </button>
       <nav
+        sx={{
+          backgroundColor: "secondary",
+          color: "text",
+        }}
         className={`layoutSmall--nav ${
           isNavOpen ? "layoutSmall--nav--open" : ""
         }`}
@@ -108,7 +113,13 @@ const LayoutSmall = () => {
 
 const LayoutLarge = () => {
   return (
-    <nav className="layoutLarge">
+    <nav
+      className="layoutLarge"
+      sx={{
+        backgroundColor: "highlight",
+        color: "text",
+      }}
+    >
       <ul className="layoutLarge--lists">
         <li>
           <CustomNavLink to="/" className="layoutLarge--lists__item">

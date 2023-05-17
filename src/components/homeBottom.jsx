@@ -7,6 +7,7 @@ import Collect from "../assets/images/delivery-guy-with-parcel-on-bike.svg";
 import WashMachine from "../assets/images/laundry.svg";
 import deliver from "../assets/images/courier-guy-holding-parcel.svg";
 import { useNavigate } from "react-router-dom";
+/** @jsxImportSource theme-ui */
 
 const HomeBottom = () => {
   const navigate = useNavigate();
@@ -17,7 +18,13 @@ const HomeBottom = () => {
 
   return (
     <section className="homeBottom">
-      <section className="work paddingTop-lg">
+      <section
+        className="work paddingTop-lg"
+        sx={{
+          backgroundColor: "background",
+          color: "text",
+        }}
+      >
         <div className="work--header">
           <h1 className="work--header__title">Why Choose Us?</h1>
           <p className="work--header__subtitle">
@@ -79,7 +86,13 @@ const HomeBottom = () => {
           </figure>
         </div>
       </section>
-      <section className="work paddingTop-sm light-blue-bg">
+      <section
+        className="work paddingTop-sm"
+        sx={{
+          backgroundColor: "highlight",
+          color: "text",
+        }}
+      >
         <div className="work--header">
           <h1 className="work--header__title">How Machala Laundry Works</h1>
           <p className="work--header__subtitle">
