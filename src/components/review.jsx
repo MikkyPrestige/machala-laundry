@@ -1,6 +1,6 @@
-// GOOGLE REVIEW COMPONENT
 import { React, useState } from "react";
 import Estimate from "./estimate";
+import "animate.css";
 /** @jsxImportSource theme-ui */
 
 const Reviews = () => {
@@ -15,7 +15,8 @@ const Reviews = () => {
   };
 
   return (
-    <section className="reviews"
+    <section
+      className="reviews"
       sx={{
         backgroundColor: "background",
         color: "text",
@@ -39,7 +40,7 @@ const Reviews = () => {
         </p>
         <button
           type="submit"
-          className="request--btn"
+          className="request--btn animate__animated animate__tada animate__repeat-5 animate__slow"
           onClick={handleEstimateToggleOpen}
         >
           Get an Estimate

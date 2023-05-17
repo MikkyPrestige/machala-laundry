@@ -145,3 +145,30 @@
      opacity: 1;
    }
  }
+
+ @keyframes in-circle-swoop {
+   from {
+     clip-path: var(--circle-top-right-out);
+   }
+
+   to {
+     clip-path: var(--circle-bottom-right-in);
+   }
+ }
+
+ @keyframes out-circle-swoop {
+   from {
+     clip-path: var(--circle-bottom-right-in);
+   }
+
+   to {
+     clip-path: var(--circle-top-right-out);
+   }
+ }
+
+
+ // animation: out-circle-swoop 3s;
+ // -webkit-animation: in-circle-swoop 3s;
+ // -moz-animation: in-circle-swoop;
+ // -ms-animation: in-circle-swoop;
+ // -o-animation: in-circle-swoop;

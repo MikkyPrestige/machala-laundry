@@ -101,7 +101,6 @@ const Stores = () => {
           </div>
         </div>
       </div>
-
       <div
         className="stores--container"
         sx={{

@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <ErrorBoundary fallback={<ErrorBoundaryFallback />}>
+      <ErrorBoundary FallbackComponent={ErrorBoundaryFallback}>
         <Suspense
           fallback={
             <div

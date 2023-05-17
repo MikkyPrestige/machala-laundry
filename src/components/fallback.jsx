@@ -13,7 +13,7 @@ const ErrorBoundaryFallback = ({ error }) => {
       }}
     >
       <h1 className="errorBoundary--title">Something went wrong</h1>
-      <pre className="errorBoundary--text">{error.message}</pre>
+      <p className="errorBoundary--text">{error.message}</p>
       <Link to="/" className="errorBoundary--link">
         Go back to the homepage
       </Link>

@@ -7,6 +7,7 @@ import Collect from "../assets/images/delivery-guy-with-parcel-on-bike.svg";
 import WashMachine from "../assets/images/laundry.svg";
 import deliver from "../assets/images/courier-guy-holding-parcel.svg";
 import { useNavigate } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 /** @jsxImportSource theme-ui */
 
 const HomeBottom = () => {
@@ -17,7 +18,7 @@ const HomeBottom = () => {
   };
 
   return (
-    <section className="homeBottom">
+    <section className="homeBottom overflow">
       <section
         className="work paddingTop-lg"
         sx={{
@@ -33,57 +34,60 @@ const HomeBottom = () => {
           </p>
         </div>
         <div className="work--content">
-          <figure className="work--content__item">
-            <div className="work--content__item--avatar">
-              <Avatar
-                image={Delivery}
-                alt="Pick up and Delivery"
-                style={{ width: "100%", height: "100%", borderRadius: "50%" }}
-              />
-            </div>
-            <figcaption className="work--content__item--wrapper">
-              <h3 className="work--content__item--wrapper__title">
-                Fast Pickup and Delivery
-              </h3>
-              <p className="work--content__item--wrapper__subtitle">
-                Your Laundry gets picked up and delivered back to your doorstep
-              </p>
-            </figcaption>
-          </figure>
-          <figure className="work--content__item">
-            <div className="work--content__item--avatar">
-              <Avatar
-                image={Affordable}
-                alt="Affordable"
-                style={{ width: "100%", height: "100%", borderRadius: "50%" }}
-              />
-            </div>
-            <figcaption className="work--content__item--wrapper">
-              <h3 className="work--content__item--wrapper__title">
-                Affordable Service
-              </h3>
-              <p className="work--content__item--wrapper__subtitle">
-                Our services are affordable and No additional cost added
-              </p>
-            </figcaption>
-          </figure>
-          <figure className="work--content__item">
-            <div className="work--content__item--avatar">
-              <Avatar
-                image={Medal}
-                alt="First Place"
-                style={{ width: "100%", height: "100%", borderRadius: "50%" }}
-              />
-            </div>
-            <figcaption className="work--content__item--wrapper">
-              <h3 className="work--content__item--wrapper__title">
-                Quality Guaranteed
-              </h3>
-              <p className="work--content__item--wrapper__subtitle">
-                We ensure the best quality service in time
-              </p>
-            </figcaption>
-          </figure>
+          <Fade direction="left" delay={3} cascade damping={1}>
+            <figure className="work--content__item">
+              <div className="work--content__item--avatar">
+                <Avatar
+                  image={Delivery}
+                  alt="Pick up and Delivery"
+                  style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+                />
+              </div>
+              <figcaption className="work--content__item--wrapper">
+                <h3 className="work--content__item--wrapper__title">
+                  Fast Pickup and Delivery
+                </h3>
+                <p className="work--content__item--wrapper__subtitle">
+                  Your Laundry gets picked up and delivered back to your
+                  doorstep
+                </p>
+              </figcaption>
+            </figure>
+            <figure className="work--content__item">
+              <div className="work--content__item--avatar">
+                <Avatar
+                  image={Affordable}
+                  alt="Affordable"
+                  style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+                />
+              </div>
+              <figcaption className="work--content__item--wrapper">
+                <h3 className="work--content__item--wrapper__title">
+                  Affordable Service
+                </h3>
+                <p className="work--content__item--wrapper__subtitle">
+                  Our services are affordable and No additional cost added
+                </p>
+              </figcaption>
+            </figure>
+            <figure className="work--content__item">
+              <div className="work--content__item--avatar">
+                <Avatar
+                  image={Medal}
+                  alt="First Place"
+                  style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+                />
+              </div>
+              <figcaption className="work--content__item--wrapper">
+                <h3 className="work--content__item--wrapper__title">
+                  Quality Guaranteed
+                </h3>
+                <p className="work--content__item--wrapper__subtitle">
+                  We ensure the best quality service in time
+                </p>
+              </figcaption>
+            </figure>
+          </Fade>
         </div>
       </section>
       <section
@@ -107,59 +111,62 @@ const HomeBottom = () => {
             <span className="work--content2__progress-bar__stop three"></span>
           </div>
           <div className="work--content2__items">
-            <figure className="work--content2__items__item">
-              <div className="work--content2__items__item--avatar">
-                <Avatar
-                  image={Collect}
-                  alt="Pick up Image"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </div>
-              <figcaption className="work--content2__items__item--text">
-                <h3 className="work--content2__items__item--text__title">
-                  We collect
-                </h3>
-                <p className="work--content2__items__item--text__subtitle">
-                  We collect your laundry from your doorstep any day of the week
-                </p>
-              </figcaption>
-            </figure>
-            <figure className="work--content2__items__item">
-              <div className="work--content2__items__item--avatar">
-                <Avatar
-                  image={WashMachine}
-                  alt="Washing Machine Image"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </div>
-              <figcaption className="work--content2__items__item--text">
-                <h3 className="work--content2__items__item--text__title">
-                  We Wash
-                </h3>
-                <p className="work--content2__items__item--text__subtitle">
-                  We use the best quality products and clean your laundry with
-                  utmost care.
-                </p>
-              </figcaption>
-            </figure>
-            <figure className="work--content2__items__item">
-              <div className="work--content2__items__item--avatar">
-                <Avatar
-                  image={deliver}
-                  alt="Delivery Image"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </div>
-              <figcaption className="work--content2__items__item--text">
-                <h3 className="work--content2__items__item--text__title">
-                  We deliver
-                </h3>
-                <p className="work--content2__items__item--text__subtitle">
-                  We deliver your clean, fresh laundry back to your doorstep at
-                  the scheduled time.
-                </p>
-              </figcaption>
-            </figure>
+            <Fade direction="right" delay={5} cascade damping={1}>
+              <figure className="work--content2__items__item">
+                <div className="work--content2__items__item--avatar">
+                  <Avatar
+                    image={Collect}
+                    alt="Pick up Image"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </div>
+                <figcaption className="work--content2__items__item--text">
+                  <h3 className="work--content2__items__item--text__title">
+                    We collect
+                  </h3>
+                  <p className="work--content2__items__item--text__subtitle">
+                    We collect your laundry from your doorstep any day of the
+                    week
+                  </p>
+                </figcaption>
+              </figure>
+              <figure className="work--content2__items__item">
+                <div className="work--content2__items__item--avatar">
+                  <Avatar
+                    image={WashMachine}
+                    alt="Washing Machine Image"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </div>
+                <figcaption className="work--content2__items__item--text">
+                  <h3 className="work--content2__items__item--text__title">
+                    We Wash
+                  </h3>
+                  <p className="work--content2__items__item--text__subtitle">
+                    We use the best quality products and clean your laundry with
+                    utmost care.
+                  </p>
+                </figcaption>
+              </figure>
+              <figure className="work--content2__items__item">
+                <div className="work--content2__items__item--avatar">
+                  <Avatar
+                    image={deliver}
+                    alt="Delivery Image"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </div>
+                <figcaption className="work--content2__items__item--text">
+                  <h3 className="work--content2__items__item--text__title">
+                    We deliver
+                  </h3>
+                  <p className="work--content2__items__item--text__subtitle">
+                    We deliver your clean, fresh laundry back to your doorstep
+                    at the scheduled time.
+                  </p>
+                </figcaption>
+              </figure>
+            </Fade>
           </div>
         </div>
         <button onClick={order} className="work--btn">
