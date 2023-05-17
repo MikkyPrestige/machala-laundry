@@ -1,23 +1,33 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import washingMachine from "../assets/images/machine1.png";
 import Avatar from "../components/avatar";
-// import { database, ref, set } from "../config";
+import { db, ref, set } from "../config";
 import { Helmet } from "react-helmet";
 import HandShake from "../assets/images/handshake.png";
 /** @jsxImportSource theme-ui */
 
 const Booking = () => {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phoneNumber: "",
-    pickupAddress: "",
-    deliveryAddress: "",
-    pickupDateTime: "",
-    deliveryDateTime: "",
-    serviceType: "",
-    instruction: "",
+  const [form, setForm] = useState(() => {
+    const savedForm = localStorage.getItem("booking");
+    return savedForm
+      ? JSON.parse(savedForm)
+      : {
+          name: "",
+          email: "",
+          phoneNumber: "",
+          pickupAddress: "",
+          deliveryAddress: "",
+          pickupDateTime: "",
+          deliveryDateTime: "",
+          serviceType: "",
+          instruction: "",
+        };
   });
+
+  useEffect(() => {
+    localStorage.setItem("booking", JSON.stringify(form));
+  }, [form]);
+
   const [error, setError] = useState([]);
   const [success, setSuccess] = useState(false);
   const [successName, setSuccessName] = useState("");
@@ -44,7 +54,7 @@ const Booking = () => {
   };
 
   const validateForm = () => {
-    let errors = [];
+    let errors = {};
     let isValid = true;
 
     if (!form.name.trim()) {
@@ -60,10 +70,25 @@ const Booking = () => {
     ) {
       isValid = false;
       errors["phoneNumber"] = "Please enter a valid phone number";
-    } else if (!form.serviceType.trim()) {
+    } else if (!form.pickupAddress.trim()) {
+      isValid = false;
+      errors["pickupAddress"] = "Please enter a pickup address";
+    } else if (!form.pickupDateTime.trim()) {
+      isValid = false;
+      errors["pickupDateTime"] = "Please enter a pickup date and time";
+    } else {
+      const pickupDate = new Date(form.pickupDateTime);
+      if (isNaN(pickupDate) || pickupDate < new Date()) {
+        isValid = false;
+        errors["pickupDateTime"] = "Please enter a valid pickup date and time";
+      }
+    }
+
+    if (!form.serviceType.trim()) {
       isValid = false;
       errors["serviceType"] = "Please select a service type";
     }
+
     setError(errors);
     return isValid;
   };
@@ -71,28 +96,29 @@ const Booking = () => {
   const submitForm = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // sendMessage(form);
-      console.log(form);
+      sendMessage(form);
+      // console.log(form);
       setSuccess(true);
       setSuccessName(form.name);
       reset();
+      localStorage.removeItem("booking");
     }
   };
 
   // SEND FORM DATA TO FIREBASE
-  // const sendMessage = (form) => {
-  //   set(ref(database, "orders/" + Math.floor(Math.random() * 10000000)), {
-  //     name: form.name,
-  //     email: form.email,
-  //     phoneNumber: form.phoneNumber,
-  //     pickupAddress: form.pickupAddress,
-  //     deliveryAddress: form.deliveryAddress,
-  //     pickupDateTime: form.pickupDateTime,
-  //     deliveryDateTime: form.deliveryDateTime,
-  //     serviceType: form.serviceType,
-  //     instruction: form.instruction,
-  //   });
-  // };
+  const sendMessage = (form) => {
+    set(ref(db, "orders/" + Math.floor(Math.random() * 10000000)), {
+      Name: form.name,
+      Email: form.email,
+      Phone_Number: form.phoneNumber,
+      Pickup_Address: form.pickupAddress,
+      Delivery_Address: form.deliveryAddress,
+      Pickup_DateTime: form.pickupDateTime,
+      Delivery_DateTime: form.deliveryDateTime,
+      Service_Type: form.serviceType,
+      Instructions: form.instruction,
+    });
+  };
 
   // REMOVE POPUP
   const removePopup = () => {
@@ -227,6 +253,9 @@ const Booking = () => {
               onChange={handleChange}
               value={form.pickupAddress}
             />
+            <p className="booking--container--form__error">
+              {error.pickupAddress}
+            </p>
           </div>
           <div className="booking--container--form__group">
             <label
@@ -262,6 +291,9 @@ const Booking = () => {
               onChange={handleChange}
               value={form.pickupDateTime}
             />
+            <p className="booking--container--form__error">
+              {error.pickupDateTime}
+            </p>
           </div>
           <div className="booking--container--form__group">
             <label
