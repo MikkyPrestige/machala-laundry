@@ -25,8 +25,13 @@ const Reviews = () => {
       <div className="review">
         <h1 className="review--title">Clients Review</h1>
         <div className="review--container">
-          <iframe
+          {/* <iframe
             src="https://widgets.sociablekit.com/google-reviews/iframe/138606"
+            title="Google Reviews"
+            className="review--container__frame"
+          ></iframe> */}
+          <iframe
+            src="https://widgets.sociablekit.com/google-reviews/iframe/144300"
             title="Google Reviews"
             className="review--container__frame"
           ></iframe>

@@ -12,7 +12,7 @@
 
   @include respond(desktop) {
     @include flex-row;
-    margin-top: 5rem;
+    padding: 8rem 2rem 2rem 7rem;
   }
 
   &--head {
@@ -83,7 +83,7 @@
         padding: 1rem 0;
 
         &--link {
-          // color: var(--color-black-rgba);
+          color: var(--color-black-rgba);
           background-color: var(--color-yellow);
           font-size: var(--font-size-xxl);
           font-weight: var(--font-weight-bd);
@@ -125,7 +125,7 @@
     }
 
     &__subtitle {
-      // color: var(--color-black-rgba);
+      color: var(--color-white-rgba);
       font-size: var(--font-size-xxxl);
       font-weight: var(--font-weight-bds);
       font-family: var(--font-family);

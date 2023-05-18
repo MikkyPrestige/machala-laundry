@@ -58,12 +58,16 @@
     //background: linear-gradient(to right, var(--color-white), var(--color-white-rgba));
     z-index: 200;
     overflow: hidden;
-    transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
     animation: out-circle-swoop 3s;
+    -webkit-animation: out-circle-swoop 3s;
+    -moz-animation: out-circle-swoop;
+    -ms-animation: out-circle-swoop;
+    -o-animation: out-circle-swoop;
 
     &--open {
       width: 100%;
@@ -73,6 +77,7 @@
       -moz-animation: in-circle-swoop;
       -ms-animation: in-circle-swoop;
       -o-animation: in-circle-swoop;
+      z-index: 200;
     }
 
     &__lists {
@@ -162,10 +167,6 @@
       gap: 2rem;
       list-style-type: none;
       margin-left: 25%;
-
-      @include respond(desktop) {
-        margin-left: 50%;
-      }
 
       &__item {
         @include align-center;

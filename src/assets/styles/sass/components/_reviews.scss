@@ -43,6 +43,7 @@
   background-color: var(--color-black-rgb);
   width: 85%;
   padding: 1rem;
+  z-index: 1000;
 
   &--title {
     font-size: var(--font-size-xxxl);

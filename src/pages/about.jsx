@@ -87,7 +87,6 @@ const About = () => {
         className="services"
         sx={{
           backgroundColor: "secondary",
-          color: "text",
         }}
       >
         <Fade direction="down" cascade damping={1}>

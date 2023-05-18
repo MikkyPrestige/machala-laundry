@@ -21,16 +21,14 @@ const Stores = () => {
       </Helmet>
       <div className="stores--intro">
         <p className="stores--intro__text">
-          We are a full-service laundry provider headquartered in Asaba, Delta
-          State. Machala Laundry is the place for your washing, ironing, and
-          folding of laundries. We render modern, fast, and friendly services.
+          Machala Laundry is the place for your washing, ironing, and folding of
+          laundries. We render modern, fast, and friendly services.
         </p>
       </div>
       <div
         className="stores--container"
         sx={{
           backgroundColor: "secondary",
-          color: "text",
         }}
       >
         <header className="stores--container__header">
@@ -105,7 +103,6 @@ const Stores = () => {
         className="stores--container"
         sx={{
           backgroundColor: "secondary",
-          color: "text",
         }}
       >
         <header className="stores--container__header">

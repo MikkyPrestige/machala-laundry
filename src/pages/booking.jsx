@@ -346,7 +346,10 @@ const Booking = () => {
             </div>
             <div className="booking--container--form__check--content">
               <div className="booking--container--form__check--content__group">
-                <label className="booking--container--form__check--content__group__label">
+                <label
+                  htmlFor="instruction"
+                  className="booking--container--form__check--content__group__label"
+                >
                   <input
                     type="checkbox"
                     name="instruction"
