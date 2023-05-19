@@ -1,11 +1,11 @@
 import React from "react";
 import Avatar from "./avatar";
-import Delivery from "../assets/videos/delivery.mp4";
-import Affordable from "../assets/videos/discount.mp4";
-import Medal from "../assets/videos/badge.mp4";
-// import Delivery from "../assets/gif/delivery-boy.gif";
-// import Affordable from "../assets/gif/shopping.gif";
-// import Medal from "../assets/gif/first-place-badge.gif";
+// import Delivery from "../assets/videos/delivery.mp4";
+// import Affordable from "../assets/videos/discount.mp4";
+// import Medal from "../assets/videos/badge.mp4";
+import Delivery from "../assets/gif/delivery-boy.gif";
+import Affordable from "../assets/gif/shopping.gif";
+import Medal from "../assets/gif/first-place-badge.gif";
 import Collect from "../assets/images/delivery-guy-with-parcel-on-bike.svg";
 import WashMachine from "../assets/images/laundry.svg";
 import deliver from "../assets/images/courier-guy-holding-parcel.svg";
@@ -40,12 +40,12 @@ const HomeBottom = () => {
           <Fade direction="left" delay={3} cascade damping={1}>
             <figure className="work--content__item">
               <div className="work--content__item--avatar">
-                {/* <Avatar
+                <Avatar
                   image={Delivery}
                   alt="Pick up and Delivery"
                   style={{ width: "100%", height: "100%", borderRadius: "50%" }}
-                /> */}
-                <video
+                />
+                {/* <video
                   autoplay="autoplay"
                   loop="loop"
                   muted="muted"
@@ -55,7 +55,7 @@ const HomeBottom = () => {
                   }}
                 >
                   <source src={Delivery} type="video/mp4" />
-                </video>
+                </video> */}
               </div>
               <figcaption className="work--content__item--wrapper">
                 <h3 className="work--content__item--wrapper__title">
@@ -69,12 +69,12 @@ const HomeBottom = () => {
             </figure>
             <figure className="work--content__item">
               <div className="work--content__item--avatar">
-                {/* <Avatar
+                <Avatar
                   image={Affordable}
                   alt="Affordable"
                   style={{ width: "100%", height: "100%", borderRadius: "50%" }}
-                /> */}
-                <video
+                />
+                {/* <video
                   autoplay="autoplay"
                   loop="loop"
                   muted="muted"
@@ -84,7 +84,7 @@ const HomeBottom = () => {
                   }}
                 >
                   <source src={Affordable} type="video/mp4" />
-                </video>
+                </video> */}
               </div>
               <figcaption className="work--content__item--wrapper">
                 <h3 className="work--content__item--wrapper__title">
@@ -97,12 +97,12 @@ const HomeBottom = () => {
             </figure>
             <figure className="work--content__item">
               <div className="work--content__item--avatar">
-                {/* <Avatar
+                <Avatar
                   image={Medal}
                   alt="First Place"
                   style={{ width: "100%", height: "100%", borderRadius: "50%" }}
-                /> */}
-                <video
+                />
+                {/* <video
                   autoplay="autoplay"
                   loop="loop"
                   muted="muted"
@@ -112,7 +112,7 @@ const HomeBottom = () => {
                   }}
                 >
                   <source src={Medal} type="video/mp4" />
-                </video>
+                </video> */}
               </div>
               <figcaption className="work--content__item--wrapper">
                 <h3 className="work--content__item--wrapper__title">
@@ -205,7 +205,7 @@ const HomeBottom = () => {
             </Fade>
           </div>
         </div>
-        <button onClick={order} className="work--btn">
+        <button onClick={order} className="work--btn" id="work--btn">
           Order Now
         </button>
       </section>

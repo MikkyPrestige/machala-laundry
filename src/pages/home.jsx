@@ -37,7 +37,7 @@ const Home = () => {
               click.
             </p>
           </div>
-          <button className="home--content__btn">
+          <button className="home--content__btn" id="request--service__btn">
             <a href="tel: +2347061516180">Request a service</a>
           </button>
         </section>

@@ -12,7 +12,8 @@ const NotFound = () => {
         <title>Machala Laundry | 404 Error Page</title>
         <meta name="description" content="Page not found" />
       </Helmet>
-      <div className="notFound"
+      <div
+        className="notFound"
         sx={{
           backgroundColor: "background",
           color: "text",

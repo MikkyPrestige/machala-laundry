@@ -307,7 +307,7 @@ const Estimate = ({ onClose }) => {
           </tr>
         </tbody>
       </table>
-      <button onClick={onClose} className="estimate--btn">
+      <button onClick={onClose} className="estimate--btn" id="estimate--btn">
         Close
       </button>
     </section>

@@ -63,7 +63,7 @@ function App() {
                 checked={isDark}
                 onChange={toggleColorMode}
               />
-              <label htmlFor="slider"></label>
+              <label htmlFor="slider">{""}</label>
             </div>
             <div className="toggle__item">
               <Avatar
