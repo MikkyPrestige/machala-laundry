@@ -48,7 +48,11 @@ const LayoutSmall = () => {
 
   return (
     <div className="layoutSmall">
-      <button className="layoutSmall--toggle" onClick={handleNavToggleOpen}>
+      <button
+        className="layoutSmall--toggle"
+        onClick={handleNavToggleOpen}
+        id="layoutSmall--toggle"
+      >
         {isNavOpen ? (
           <MdClose className="layoutSmall--toggle--icon" />
         ) : (

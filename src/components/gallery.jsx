@@ -27,17 +27,18 @@ const Gallery = () => {
   };
 
   return (
-    <section className="gallery"
-    sx={{
-      backgroundColor: "background",
-      color: "text",
-    }}
+    <section
+      className="gallery"
+      sx={{
+        backgroundColor: "background",
+        color: "text",
+      }}
     >
       <header className="gallery--header">
         <h1 className="gallery--header__title">Our amazing works</h1>
         <p className="gallery--header__subtitle">
-          This is why you can trust <em>Machala Laundry Service</em> to take care
-          of your laundry with care.
+          This is why you can trust <em>Machala Laundry Service</em> to take
+          care of your laundry with care.
         </p>
       </header>
       <div className="gallery--carousel">
@@ -45,10 +46,18 @@ const Gallery = () => {
           <img src={images[imageIndex]} alt="gallery images" />
         </div>
         <div className="gallery--carousel__btn">
-          <button className="gallery--carousel__btn--prev" onClick={prevImage}>
+          <button
+            className="gallery--carousel__btn--prev"
+            onClick={prevImage}
+            id="gallery--carousel__btn--prev"
+          >
             <FcPrevious className="gallery--carousel__btn--icon" />
           </button>
-          <button className="gallery--carousel__btn--next" onClick={nextImage}>
+          <button
+            className="gallery--carousel__btn--next"
+            onClick={nextImage}
+            id="gallery--carousel__btn--next"
+          >
             <FcNext className="gallery--carousel__btn--icon" />
           </button>
         </div>

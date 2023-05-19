@@ -66,6 +66,7 @@ const Footer = () => {
                   href="tel: +23409034789024"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Call us"
                 >
                   <GiRotaryPhone className="footer--social__content--item--icon" />
                 </a>
@@ -73,6 +74,7 @@ const Footer = () => {
                   href="https://web.facebook.com/groups/5384168368329844/?ref=share&_rdc=1&_rdr"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Facebook"
                 >
                   <SiFacebook className="footer--social__content--item--icon" />
                 </a>
@@ -80,13 +82,17 @@ const Footer = () => {
                   href="mailto: Easyboi@myself.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Email us"
                 >
                   <MdOutlineEmail className="footer--social__content--item--icon" />
                 </a>
                 <a
-                  href="tel: +2347061516180"
+                  href="
+                  https://wa.me/2347061516180?text=Hello%20Machala%20Laundry%20Service%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20your%20services
+                  "
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Whatsapp us"
                 >
                   <ImWhatsapp className="footer--social__content--item--icon" />
                 </a>
