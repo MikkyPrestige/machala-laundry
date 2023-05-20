@@ -58,9 +58,9 @@ const HomeBottom = () => {
                 </video> */}
               </div>
               <figcaption className="work--content__item--wrapper">
-                <h3 className="work--content__item--wrapper__title">
+                <h2 className="work--content__item--wrapper__title">
                   Fast Pickup and Delivery
-                </h3>
+                </h2>
                 <p className="work--content__item--wrapper__subtitle">
                   Your Laundry gets picked up and delivered back to your
                   doorstep
@@ -87,9 +87,9 @@ const HomeBottom = () => {
                 </video> */}
               </div>
               <figcaption className="work--content__item--wrapper">
-                <h3 className="work--content__item--wrapper__title">
+                <h2 className="work--content__item--wrapper__title">
                   Affordable Service
-                </h3>
+                </h2>
                 <p className="work--content__item--wrapper__subtitle">
                   Our services are affordable and No additional cost added
                 </p>
@@ -115,9 +115,9 @@ const HomeBottom = () => {
                 </video> */}
               </div>
               <figcaption className="work--content__item--wrapper">
-                <h3 className="work--content__item--wrapper__title">
+                <h2 className="work--content__item--wrapper__title">
                   Quality Guaranteed
-                </h3>
+                </h2>
                 <p className="work--content__item--wrapper__subtitle">
                   We ensure the best quality service in time
                 </p>
@@ -157,9 +157,9 @@ const HomeBottom = () => {
                   />
                 </div>
                 <figcaption className="work--content2__items__item--text">
-                  <h3 className="work--content2__items__item--text__title">
+                  <h2 className="work--content2__items__item--text__title">
                     We collect
-                  </h3>
+                  </h2>
                   <p className="work--content2__items__item--text__subtitle">
                     We collect your laundry from your doorstep any day of the
                     week
@@ -175,9 +175,9 @@ const HomeBottom = () => {
                   />
                 </div>
                 <figcaption className="work--content2__items__item--text">
-                  <h3 className="work--content2__items__item--text__title">
+                  <h2 className="work--content2__items__item--text__title">
                     We Wash
-                  </h3>
+                  </h2>
                   <p className="work--content2__items__item--text__subtitle">
                     We use the best quality products and clean your laundry with
                     utmost care.
@@ -193,9 +193,9 @@ const HomeBottom = () => {
                   />
                 </div>
                 <figcaption className="work--content2__items__item--text">
-                  <h3 className="work--content2__items__item--text__title">
+                  <h2 className="work--content2__items__item--text__title">
                     We deliver
-                  </h3>
+                  </h2>
                   <p className="work--content2__items__item--text__subtitle">
                     We deliver your clean, fresh laundry back to your doorstep
                     at the scheduled time.

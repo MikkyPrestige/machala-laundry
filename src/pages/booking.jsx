@@ -20,7 +20,7 @@ const Booking = () => {
           pickupDateTime: "",
           deliveryDateTime: "",
           serviceType: "",
-          instruction: "",
+          message: "",
         };
   });
 
@@ -49,7 +49,7 @@ const Booking = () => {
       pickupDateTime: "",
       deliveryDateTime: "",
       serviceType: "",
-      instruction: "",
+      message: "",
     });
   };
 
@@ -116,7 +116,7 @@ const Booking = () => {
       Pickup_DateTime: form.pickupDateTime,
       Delivery_DateTime: form.deliveryDateTime,
       Service_Type: form.serviceType,
-      Instructions: form.instruction,
+      Message: form.message,
     });
   };
 
@@ -336,9 +336,9 @@ const Booking = () => {
           </div>
           <div className="booking--container--form__check">
             <div className="booking--container--form__check--header">
-              <h3 className="booking--container--form__check--header__title">
+              <h2 className="booking--container--form__check--header__title">
                 Important Instructions
-              </h3>
+              </h2>
               <p className="booking--container--form__check--header__subtitle">
                 Please read the following instructions carefully before
                 submitting your laundry.
@@ -399,11 +399,11 @@ const Booking = () => {
               </div>
               <textarea
                 className="booking--container--form__check--content__textarea"
-                name="instruction"
-                id="instruction"
+                name="message"
+                id="message"
                 placeholder="Please specify any special instructions or requests here"
                 onChange={handleChange}
-                value={form.instruction}
+                value={form.message}
               ></textarea>
             </div>
           </div>

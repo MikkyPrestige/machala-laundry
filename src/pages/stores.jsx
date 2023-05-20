@@ -152,7 +152,7 @@ const Stores = () => {
                 </h3>
               </div>
             </div>
-            <button className="stores--container__body--btn" id="contact--btn">
+            <button className="stores--container__body--btn" id="contact">
               <a
                 href="mailto: Easyboi@myself.com"
                 target="_blank"
