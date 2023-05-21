@@ -1,0 +1,50 @@
+.estimate {
+  width: 100%;
+  height: 100%;
+  @include flex-col;
+  gap: 1rem;
+  margin-top: 2rem;
+  background-color: var(--color-blue-lt);
+  padding: 1rem 0;
+
+  &--head {
+    width: 100%;
+    @include flex-col;
+    gap: .5rem;
+
+    &__title {
+      font-size: var(--font-size-xxl);
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    &__note {
+      font-family: var(--font-family);
+      text-align: center;
+      color: var(--color-black-rgba);
+      font-size: var(--font-size-lg);
+      padding: .5rem;
+
+      a,
+      a:link,
+      a:visited,
+      a:active {
+        color: var(--color-blue-2);
+        text-decoration: none;
+        font-weight: var(--font-weight-bd);
+        font-size: var(--font-size-lg);
+        font-family: var(--font-family);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &--table {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+}

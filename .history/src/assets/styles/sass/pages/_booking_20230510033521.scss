@@ -1,0 +1,202 @@
+.booking {
+  color: var(--color-white-rgb);
+  margin-top: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+
+  &--header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    &__title {
+      color: var(--color-blue-2);
+      font-size: var(--font-size-xxl);
+      font-weight: var(--font-weight-bd);
+      text-transform: uppercase;
+    }
+
+    &__avatar {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 1rem;
+      padding: 1rem;
+      background-color: var(--color-blue-2);
+    }
+  }
+
+  &--container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    &__subtitle {
+      color: var(--color-blue-lt);
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-md);
+      font-family: var(--font-family);
+      text-transform: capitalize;
+    }
+
+    &--form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      width: 80%;
+      height: 100%;
+
+      &__group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        width: 100%;
+
+        &--label {
+          color: var(--color-blue-2);
+          font-size: var(--font-size-lg);
+          font-family: var(--font-family);
+          text-transform: capitalize;
+          align-self: flex-start;
+        }
+
+        &--input {
+          width: 100%;
+          height: 4rem;
+          border: none;
+          border-radius: .5rem;
+          padding: 0 1rem;
+          font-size: var(--font-size-lg);
+          font-family: var(--font-family);
+          background-color: var(--color-white-rgb);
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      &__check {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        border-radius: .5rem;
+        background-color: var(--color-blue-2);
+
+        &--header {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+
+          &__title {
+            color: var(--color-black-rgba);
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-bds);
+            text-transform: uppercase;
+          }
+
+          &__subtitle {
+            color: var(--color-black-rgba);
+            font-size: var(--font-size-md);
+            font-weight: var(--font-weight-bd);
+            font-family: var(--font-family);
+            text-transform: capitalize;
+            text-align: center;
+          }
+        }
+
+        &--content {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+
+          &__group {
+            width: 100%;
+            height: 100%;
+
+            &__label {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              width: 100%;
+              height: 100%;
+
+              &__checkbox {
+                border: 1px solid var(--color-blue-lt);
+                border-radius: .5rem;
+                cursor: pointer;
+                transition: all .3s;
+              }
+
+              &__text {
+                color: var(--color-black-rgba);
+                font-size: var(--font-size-md);
+                font-family: var(--font-family);
+              }
+            }
+          }
+
+          &__textarea {
+            width: 100%;
+            height: 10rem;
+            border: none;
+            border-radius: .5rem;
+            padding: 1rem;
+            font-size: var(--font-size-lg);
+            font-family: var(--font-family);
+            background-color: var(--color-white-rgb);
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+
+      &__cta {
+        width: 40%;
+        height: 4rem;
+        border: none;
+        border-radius: .5rem;
+        background-color: var(--color-yellow);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-bd);
+        font-family: var(--font-family);
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+          background-color: var(--color--gray-1);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

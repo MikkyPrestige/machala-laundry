@@ -1,0 +1,189 @@
+.layout {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.layoutSmall {
+  padding: 1rem;
+  position: relative;
+
+  @include respond(tab-land) {
+    display: none;
+  }
+
+  &--toggle {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    z-index: 1000;
+    background-image: linear-gradient(to right, var(--color--gray-1), var(--color-blue-lt));
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--icon {
+      font-size: var(--font-size-home);
+      color: var(--color-black);
+      font-weight: var(--font-weight-md);
+    }
+
+    &:hover {
+      background-image: linear-gradient(to right, var(--color-white-rgba), var(--color-white));
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--active {
+      background-image: linear-gradient(to right, var(--color-white-rgba), var(--color-white));
+    }
+  }
+
+  &--nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: fixed;
+    top: 1rem;
+    right: 0;
+    width: 0;
+    max-width: 100%;
+    height: 80%;
+    background: linear-gradient(to right, var(--color-white), var(--color-white-rgba));
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    z-index: 200;
+    overflow: hidden;
+
+    &--open {
+      width: 100%;
+      height: 90vh;
+    }
+
+    &__lists {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      list-style-type: none;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-md);
+        color: var(--color-black);
+        cursor: pointer;
+        border-width: 0;
+        border-radius: .5rem;
+        opacity: 1;
+        padding: 1rem 2rem;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1), background-color 100ms cubic-bezier(.694, 0, 0.335, 1), color 100ms cubic-bezier(.694, 0, 0.335, 1);
+
+        &::before {
+          animation: opacityFallbackOut .5s step-end forwards;
+          backface-visibility: hidden;
+          background-color: #EBEBEB;
+          border-radius: .5rem;
+          clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+          content: "";
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          transform: translateZ(0);
+          transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+          width: 100%;
+          -webkit-animation: opacityFallbackOut .5s step-end forwards;
+        }
+
+        &:hover::before {
+          animation: opacityFallbackIn 0s step-start forwards;
+          clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+        }
+
+        &::after {
+          background-color: var(--color-white-rgb);
+        }
+
+        &--icon {
+          font-size: var(--font-size-big);
+          fill: var(--color-blue-1);
+          z-index: 1;
+        }
+
+        span {
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+
+.layoutLarge {
+  display: none;
+
+  @include respond(tab-land) {
+    display: block;
+    width: 100%;
+    height: 7rem;
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--color-white-rgba);
+    box-shadow: 0 0 .5rem var(--color--gray-1);
+
+    &--lists {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+      width: 60%;
+      transform: translateX(5rem);
+      -webkit-transform: translateX(60%);
+      -moz-transform: translateX(5rem);
+      -ms-transform: translateX(5rem);
+      -o-transform: translateX(5rem);
+
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-md);
+        color: var(--color-black);
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+
+
+        &--icon {
+          font-size: var(--font-size-home);
+          color: var(--color-black);
+          font-weight: var(--font-weight-md);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+:root {
+  // COLORS
+  --color-white: #F5F5F5;
+  --color--white-lt: #f3fbfe;
+  --color-black: #000000;
+  --color-gray: #454545;
+  --color--gray-1: #d3d3d3;
+
+  --color-white-rgba: rgba(255, 255, 255, 1);
+  --color-white-rgb: rgb(246, 246, 246);
+  --color-black-rgba: rgba(0, 0, 0, 1);
+  --color-black-rgb: rgb(38, 21, 35);
+  --color-black-1: rgba(0, 0, 0, 0.5);
+  --color-black-2: rgba(0, 0, 0, 0.3);
+  --color-gray-rgba: rgba(69, 69, 69, 1);
+
+
+  --color-red: #e83611;
+  --color-red-1: #f9002f;
+  --color-red-1: #F11712;
+  --color-blue: #3498DB;
+  --color-blue-1: #186cb8;
+  --color-blue-lt: #ddf1f8;
+  --color-green-3: #00ff7f;
+  --color-green-3: #2a9a9f;
+  --color-yellow-4: #ffff14;
+  --color-yellow-4: #f1b211;
+
+  // FONTS
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Inter', 'Helvetica Neue';
+  --font-tertiary: 'Fira Sans', monospace;
+  --font-family: 'verdana', sans-serif;
+
+  // FONT SIZES
+  --font-size-xs: .8rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.2rem;
+  --font-size-lg: 1.4rem;
+  --font-size-xl: 1.6rem;
+  --font-size-xxl: 1.8rem;
+  --font-size-xxxl: 2rem;
+  --font-size-home: 3.5rem;
+
+  // FONT WEIGHTS
+  --font-weight-lt: 300;
+  --font-weight-nl: 400;
+  --font-weight-md: 500;
+  --font-weight-bd: 700;
+  --font-weight-bds: 900;
+}

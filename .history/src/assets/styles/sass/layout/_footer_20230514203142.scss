@@ -1,0 +1,130 @@
+.footer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white-rgb);
+  color: var(--color-black);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &--logo {
+    width: 80%;
+    height: 20rem;
+}
+
+  &--social {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    &__title {
+      font-size: var(--font-size-xxl);
+      text-transform: capitalize;
+      font-weight: var(--font-weight-bd);
+      color: var(--color-blue-2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+
+      &--header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        &__title {
+          font-size: var(--font-size-xxl);
+          text-transform: capitalize;
+          text-align: center;
+        }
+
+        &__text {
+          font-size: var(--font-size-lg);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: .5rem;
+
+          &--link,
+          &:link,
+          &:visited,
+          &:active {
+            font-size: var(--font-size-lg);
+            font-family: var(--font-family);
+            color: var(--color-black);
+            text-decoration: none;
+            text-transform: capitalize;
+
+            &:hover {
+              color: var(--color-blue-2);
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      &--item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        &--icon {
+          font-size: var(--font-size-home);
+          background-color: var(--color-blue-lt);
+          color: var(--color-black);
+          padding: .4rem;
+          border-radius: 50%;
+          transition: all .3s;
+          box-shadow: 0 0 .5rem 0 var(--color--gray-1);
+
+          &:hover {
+            background-color: var(--color-blue-2);
+            color: var(--color--white-lt);
+            animation: heartbeat 1.5s ease-in-out;
+            -webkit-animation: heartbeat 1.5s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  &--home {
+    margin-top: 15rem;
+  }
+
+  &--copyright {
+    font-size: var(--font-size-md);
+    color: var(--color-secondary-rgba);
+    text-transform: capitalize;
+
+    span {
+      color: var(--color-hl-2);
+      font-weight: var(--font-weight-md);
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.reviews {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15rem;
+}
+
+.review {
+  @include flex-col;
+  background-color: var(--color-white-rgb);
+  width: 100%;
+  height: 100%;
+  margin: 2rem 0;
+
+  &--title {
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-bd);
+    color: var(--color-black-rgba);
+    margin: 2rem;
+    text-transform: uppercase;
+    align-self: flex-start;
+  }
+
+  &--container {
+    width: 100%;
+    height: 50rem;
+    margin-bottom: 10rem;
+
+    &__frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+}
+
+.request {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include flex-col;
+  background-color: var(--color-black-rgb);
+  width: 80%;
+  height: 80%;
+  padding: 2rem 1rem;
+
+  &--title {
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-bd);
+    color: var(--color-white-rgba);
+    text-transform: uppercase;
+  }
+
+  &--text {
+    font-size: var(--font-size-xl);
+    color: var(--color-white-rgb);
+    margin: 1rem 0 2rem 0;
+    text-align: center;
+  }
+
+  &--btn {
+    font-size: var(--font-size-xl);
+    color: var(--color-white-rgb);
+    text-transform: capitalize;
+    cursor: pointer;
+    border-top: 1px solid #96d1f8;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    padding: 1rem 2rem;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+    vertical-align: middle;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    border-radius: .5rem;
+
+    &:hover {
+      border-top-color: #28597a;
+      background: #28597a;
+    }
+
+    &:active {
+      border-top-color: #1b435e;
+      background: #1b435e;
+    }
+  }
+}

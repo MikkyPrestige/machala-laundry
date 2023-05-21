@@ -1,0 +1,95 @@
+.estimate {
+  width: 100%;
+  height: 100%;
+  @include flex-col;
+  gap: 1rem;
+  margin-top: 2rem;
+  background-color: var(--color-blue-lt);
+  padding: 1rem 0;
+
+  &--head {
+    width: 100%;
+    @include flex-col;
+    gap: .5rem;
+
+    &__title {
+      font-size: var(--font-size-xxl);
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    &__note {
+      font-family: var(--font-family);
+      text-align: center;
+      color: var(--color-black-rgba);
+      font-size: var(--font-size-lg);
+      padding: .5rem;
+
+      a,
+      a:link,
+      a:visited,
+      a:active {
+        color: var(--color-blue-2);
+        text-decoration: none;
+        font-weight: var(--font-weight-bd);
+        font-size: var(--font-size-lg);
+        font-family: var(--font-family);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &--table {
+    width: 100%;
+    height: 100%;
+
+    &__head {
+
+      &--row {
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-blue-2);
+        color: var(--color-white-rgb);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-bd);
+        font-family: var(--font-family);
+        text-transform: capitalize;
+        text-align: center;
+        padding: 1rem 0;
+      }
+    }
+
+    &__body {
+
+        &--row {
+          width: 100%;
+          height: 100%;
+          background-color: var(--color-white-rgb);
+          color: var(--color-black-rgba);
+          font-size: var(--font-size-lg);
+          font-weight: var(--font-weight-bd);
+          font-family: var(--font-family);
+          text-transform: capitalize;
+          text-align: center;
+          padding: 1rem 0;
+
+          &__item {
+            width: 100%;
+            height: 100%;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color--gray-1);
+          }
+        }
+    }
+  }
+
+  &--note {
+    font-family: var(--font-family);
+    text-align: center;
+    color: var(--color-black-rgba);
+    font-size: var(--font-size-lg);
+  }
+}

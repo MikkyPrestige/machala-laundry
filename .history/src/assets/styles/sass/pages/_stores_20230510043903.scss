@@ -1,0 +1,160 @@
+.stores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-blue-lt);
+
+  &--intro {
+    width: 100%;
+    height: 100%;
+    margin-top: .5rem;
+
+    &__text {
+      font-size: var(--font-size-xxl);
+      font-weight: var(--font-weight-md);
+      color: var(--color-black);
+      font-family: var(--font-secondary);
+      text-align: justify;
+    }
+  }
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color--white-lt);
+    border-radius: 1rem;
+
+    &__header {
+      align-self: flex-start;
+      padding: 0 2rem;
+      font-family: var(--font-family);
+
+      &--title {
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-bd);
+        color: var(--color-blue-2);
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      &--subtitle {
+        font-size: var(--font-size-xxxl);
+        font-weight: var(--font-weight-bd);
+        color: var(--color-black-rgba);
+        text-transform: capitalize;
+        text-align: justify;
+        word-spacing: 1rem;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+
+      &--title {
+        font-size: var(--font-size-xxl);
+        text-transform: capitalize;
+        background: #5468FF;
+        background: radial-gradient(circle farthest-corner at center center, #5468FF 0%, #5ADAFF 25%, #3C4FE0 50%, #000000 75%, #FF0000 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 60%;
+          height: 0.2rem;
+          background-color: var(--color-blue-1);
+        }
+      }
+
+      &--content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1rem;
+
+        &__item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+
+          &--avatar {
+            width: 3rem;
+            height: 3rem;
+          }
+
+          &--text {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-bd);
+            color: var(--color-black);
+          }
+        }
+      }
+
+      &--btn {
+        padding: 0 1.5rem;
+        height: 4rem;
+        border-radius: 0.5rem;
+        border: 0;
+        color: var(--color-white-rgba);
+        font-size: var(--font-size-lg);
+        cursor: pointer;
+        background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+        box-shadow: rgba(45, 35, 66, .4) 0 .2rem .4rem, rgba(45, 35, 66, .3) 0 .7rem 1.3rem -.3rem, rgba(58, 65, 111, .5) 0 -.3rem 0 inset;
+        transition: box-shadow .15s, transform .15s;
+
+        &:hover {
+          box-shadow: rgba(45, 35, 66, .4) 0 .4rem .8rem, rgba(45, 35, 66, .3) 0 7px 1.3rem -.3rem, #3c4fe0 0 -.3rem 0 inset;
+          transform: translateY(-.2rem);
+          -webkit-transform: translateY(-.2rem);
+          -moz-transform: translateY(-.2rem);
+          -ms-transform: translateY(-.2rem);
+          -o-transform: translateY(-.2rem);
+        }
+
+        &:active {
+          box-shadow: #3c4fe0 0 .3rem .7rem inset;
+          transform: translateY(.2rem);
+          -webkit-transform: translateY(.2rem);
+          -moz-transform: translateY(.2rem);
+          -ms-transform: translateY(.2rem);
+          -o-transform: translateY(.2rem);
+        }
+
+        &:focus {
+          box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 .2rem .4rem, rgba(45, 35, 66, .3) 0 .7rem 1.3rem -.3rem, #3c4fe0 0 -.3rem 0 inset;
+        }
+      }
+    }
+
+    &__map {
+      width: 100%;
+      height: 40rem;
+
+      &--frame {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        border: none;
+      }
+    }
+  }
+}

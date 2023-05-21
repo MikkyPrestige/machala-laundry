@@ -1,0 +1,68 @@
+.errorBoundary {
+  @include flex-col;
+  gap: 1rem;
+  background-color: var(--color-white-rgb);
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+
+  &--title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bd);
+    color: var(--color-red-1);
+    text-transform: capitalize;
+  }
+
+  &--text {
+    font-size: var(--font-size-lg);
+    // color: var(--color-black-rgba);
+    text-align: center;
+  }
+
+  &--link {
+    font-size: var(--font-size-lg);
+    // color: var(--color-black-rgba);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--font-family);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.notFound {
+  @include flex-col;
+  gap: 1rem;
+  background-color: var(--color-blue-lt);
+  width: 100%;
+  height: 100%;
+  padding: 15rem 0;
+
+  &--img {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  &--text {
+    font-size: var(--font-size-lg);
+    // color: var(--color-black-rgba);
+
+    &__link,
+    &:link,
+    &:visited {
+      color: var(--color-blue-2);
+      text-decoration: none;
+      font-weight: var(--font-weight-bd);
+      font-size: var(--font-size-lg);
+      font-family: var(--font-family);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+}
