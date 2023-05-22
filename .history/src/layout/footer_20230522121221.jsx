@@ -21,8 +21,9 @@ const Footer = () => {
       }}
     >
       <section className="footer--container overflow">
-        <div className="footer--layout">
-          <Fade direction="up" cascade damping={1}>
+        {/* <Fade direction="down" cascade damping={1}> */}
+          <div className="footer--layout">
+            <Fade direction="up" cascade damping={1}>
             <h2 className="footer--layout__title">
               <span>Quick Links</span> <FcLink style={{ fontSize: "3rem" }} />
             </h2>
@@ -57,10 +58,10 @@ const Footer = () => {
                 </NavLink>
               </li>
             </ul>
-          </Fade>
-        </div>
-        <div className="footer--wrapper">
-          <Fade direction="down" cascade damping={1}>
+            </Fade>
+          </div>
+          <div className="footer--wrapper">
+            <Fade direction="down" cascade damping={1}></Fade>
             <div className="footer--logo">
               <Avatar
                 image={Logo}
@@ -140,8 +141,8 @@ const Footer = () => {
                 </div>
               </div>
             </section>
-          </Fade>
-        </div>
+          </div>
+        </Fade>
       </section>
       <p className="footer--copyright">
         &copy; {new Date().getFullYear()} <span>MachalaLaundry</span>. All

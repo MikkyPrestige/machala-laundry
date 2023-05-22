@@ -21,6 +21,7 @@ const Footer = () => {
       }}
     >
       <section className="footer--container overflow">
+        {/* <Fade direction="down" cascade damping={1}> */}
         <div className="footer--layout">
           <Fade direction="up" cascade damping={1}>
             <h2 className="footer--layout__title">

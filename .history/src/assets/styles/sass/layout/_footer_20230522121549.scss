@@ -75,6 +75,15 @@
   &--logo {
     width: 100%;
     height: 10rem;
+
+    @include respond(phone-normal) {
+      height: 15rem;
+    }
+
+    @include respond(tab-land) {
+      width: 50%;
+      height: 10rem;
+    }
   }
 
   &--social {
