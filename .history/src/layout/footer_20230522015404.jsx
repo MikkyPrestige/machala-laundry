@@ -7,7 +7,6 @@ import { GiRotaryPhone } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
 import { ImWhatsapp } from "react-icons/im";
 import { SiFacebook, SiMaildotru } from "react-icons/si";
-import { FcLink } from "react-icons/fc";
 import { Fade } from "react-awesome-reveal";
 /** @jsxImportSource theme-ui */
 
@@ -23,40 +22,47 @@ const Footer = () => {
       <section className="footer--container overflow">
         <Fade direction="down" cascade damping={1}>
           <div className="footer--layout">
-            <h2 className="footer--layout__title">
-              <span>Quick Links</span> <FcLink style={{ fontSize: "3rem" }} />
-            </h2>
-            <ul className="footer--layout__list">
-              <li className="footer--layout__list__item">
-                <NavLink to="/" className="footer--layout__list__item--link">
+            {/* <div className="footer--layout__item"> */}
+            <h2 className="footer--layout__item--title">Quick Links</h2>
+            <ul className="footer--layout__item--list">
+              <li className="footer--layout__item--list__item">
+                <NavLink
+                  to="/"
+                  className="footer--layout__item--list__item--link"
+                  activeClassName="active"
+                >
                   Home
                 </NavLink>
               </li>
-              <li className="footer--layout__list__item">
+              <li className="footer--layout__item--list__item">
                 <NavLink
                   to="/about"
-                  className="footer--layout__list__item--link"
+                  className="footer--layout__item--list__item--link"
+                  activeClassName="active"
                 >
                   About
                 </NavLink>
               </li>
-              <li className="footer--layout__list__item">
+              <li className="footer--layout__item--list__item">
                 <NavLink
                   to="/stores"
-                  className="footer--layout__list__item--link"
+                  className="footer--layout__item--list__item--link"
+                  activeClassName="active"
                 >
                   Stores
                 </NavLink>
               </li>
-              <li className="footer--layout__list__item">
+              <li className="footer--layout__item--list__item">
                 <NavLink
                   to="/booking"
-                  className="footer--layout__list__item--link"
+                  className="footer--layout__item--list__item--link"
+                  activeClassName="active"
                 >
                   Book Us
                 </NavLink>
               </li>
             </ul>
+            {/* </div> */}
           </div>
           <div className="footer--wrapper">
             <div className="footer--logo">

@@ -8,56 +8,12 @@
   gap: 3rem;
 
   &--container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-    width: 100%;
-  }
-
-  &--layout {
     @include flex-col;
     gap: 1rem;
     width: 100%;
-    padding: 0 2rem;
 
-    &__title {
-      font-size: var(--font-size-xxl);
-      text-transform: capitalize;
-      font-weight: var(--font-weight-bd);
-      @include flex-row;
-      gap: .5rem;
-    }
-
-    &__list {
-      @include flex-row;
-      gap: 5rem;
-      width: 100%;
-
-      &__item {
-        list-style: none;
-
-        &--link,
-        &:link,
-        &:visited {
-          font-size: var(--font-size-xl);
-          font-family: var(--font-family);
-          font-weight: var(--font-weight-bd);
-          color: var(--color-blue-1);
-          text-decoration: none;
-          text-transform: capitalize;
-
-          &.active {
-            color: var(--color-blue-2);
-            text-decoration: underline;
-          }
-
-          &:hover {
-            color: var(--color-blue-2);
-            text-decoration: underline;
-          }
-        }
-      }
+    @include respond(tab-land) {
+      align-items: unset;
     }
   }
 
@@ -81,7 +37,7 @@
     }
 
     @include respond(tab-land) {
-      width: 20%;
+      width: 30%;
       height: 10rem;
     }
   }

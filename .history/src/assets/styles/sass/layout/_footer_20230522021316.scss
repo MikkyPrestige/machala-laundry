@@ -25,7 +25,9 @@
       font-size: var(--font-size-xxl);
       text-transform: capitalize;
       font-weight: var(--font-weight-bd);
-      @include flex-row;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       gap: .5rem;
     }
 
@@ -39,18 +41,14 @@
 
         &--link,
         &:link,
-        &:visited {
+        &:visited,
+        &:active {
           font-size: var(--font-size-xl);
           font-family: var(--font-family);
           font-weight: var(--font-weight-bd);
           color: var(--color-blue-1);
           text-decoration: none;
           text-transform: capitalize;
-
-          &.active {
-            color: var(--color-blue-2);
-            text-decoration: underline;
-          }
 
           &:hover {
             color: var(--color-blue-2);

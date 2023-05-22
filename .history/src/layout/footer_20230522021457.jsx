@@ -24,11 +24,15 @@ const Footer = () => {
         <Fade direction="down" cascade damping={1}>
           <div className="footer--layout">
             <h2 className="footer--layout__title">
-              <span>Quick Links</span> <FcLink style={{ fontSize: "3rem" }} />
+              <span>Quick Links</span> <FcLink style={{ fontSize: "1.8rem" }} />
             </h2>
             <ul className="footer--layout__list">
               <li className="footer--layout__list__item">
-                <NavLink to="/" className="footer--layout__list__item--link">
+                <NavLink
+                  to="/"
+                  className="footer--layout__list__item--link"
+                  activeClassName="active"
+                >
                   Home
                 </NavLink>
               </li>
@@ -36,6 +40,7 @@ const Footer = () => {
                 <NavLink
                   to="/about"
                   className="footer--layout__list__item--link"
+                  activeClassName="active"
                 >
                   About
                 </NavLink>
@@ -44,6 +49,7 @@ const Footer = () => {
                 <NavLink
                   to="/stores"
                   className="footer--layout__list__item--link"
+                  activeClassName="active"
                 >
                   Stores
                 </NavLink>
@@ -52,6 +58,7 @@ const Footer = () => {
                 <NavLink
                   to="/booking"
                   className="footer--layout__list__item--link"
+                  activeClassName="active"
                 >
                   Book Us
                 </NavLink>

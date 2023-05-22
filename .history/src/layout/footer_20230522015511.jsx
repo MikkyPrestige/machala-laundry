@@ -7,7 +7,6 @@ import { GiRotaryPhone } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
 import { ImWhatsapp } from "react-icons/im";
 import { SiFacebook, SiMaildotru } from "react-icons/si";
-import { FcLink } from "react-icons/fc";
 import { Fade } from "react-awesome-reveal";
 /** @jsxImportSource theme-ui */
 
@@ -23,12 +22,14 @@ const Footer = () => {
       <section className="footer--container overflow">
         <Fade direction="down" cascade damping={1}>
           <div className="footer--layout">
-            <h2 className="footer--layout__title">
-              <span>Quick Links</span> <FcLink style={{ fontSize: "3rem" }} />
-            </h2>
+            <h2 className="footer--layout__title">Quick Links</h2>
             <ul className="footer--layout__list">
               <li className="footer--layout__list__item">
-                <NavLink to="/" className="footer--layout__list__item--link">
+                <NavLink
+                  to="/"
+                  className="footer--layout__list__item--link"
+                  activeClassName="active"
+                >
                   Home
                 </NavLink>
               </li>
@@ -36,6 +37,7 @@ const Footer = () => {
                 <NavLink
                   to="/about"
                   className="footer--layout__list__item--link"
+                  activeClassName="active"
                 >
                   About
                 </NavLink>
@@ -44,6 +46,7 @@ const Footer = () => {
                 <NavLink
                   to="/stores"
                   className="footer--layout__list__item--link"
+                  activeClassName="active"
                 >
                   Stores
                 </NavLink>
@@ -52,6 +55,7 @@ const Footer = () => {
                 <NavLink
                   to="/booking"
                   className="footer--layout__list__item--link"
+                  activeClassName="active"
                 >
                   Book Us
                 </NavLink>

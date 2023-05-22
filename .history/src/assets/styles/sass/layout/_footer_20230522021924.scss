@@ -47,7 +47,7 @@
           text-decoration: none;
           text-transform: capitalize;
 
-          &.active {
+          &:active {
             color: var(--color-blue-2);
             text-decoration: underline;
           }

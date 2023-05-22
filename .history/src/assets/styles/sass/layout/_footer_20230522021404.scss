@@ -22,7 +22,7 @@
     padding: 0 2rem;
 
     &__title {
-      font-size: var(--font-size-xxl);
+      font-size: var(--font-size-xl);
       text-transform: capitalize;
       font-weight: var(--font-weight-bd);
       @include flex-row;
@@ -39,18 +39,14 @@
 
         &--link,
         &:link,
-        &:visited {
+        &:visited,
+        &:active {
           font-size: var(--font-size-xl);
           font-family: var(--font-family);
           font-weight: var(--font-weight-bd);
           color: var(--color-blue-1);
           text-decoration: none;
           text-transform: capitalize;
-
-          &.active {
-            color: var(--color-blue-2);
-            text-decoration: underline;
-          }
 
           &:hover {
             color: var(--color-blue-2);

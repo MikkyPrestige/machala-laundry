@@ -25,8 +25,10 @@
       font-size: var(--font-size-xxl);
       text-transform: capitalize;
       font-weight: var(--font-weight-bd);
-      @include flex-row;
-      gap: .5rem;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // gap: .5rem;
     }
 
     &__list {
@@ -37,23 +39,14 @@
       &__item {
         list-style: none;
 
-        &--link,
-        &:link,
-        &:visited {
-          font-size: var(--font-size-xl);
-          font-family: var(--font-family);
-          font-weight: var(--font-weight-bd);
+        &--link {
+          font-size: var(--font-size-xxl);
           color: var(--color-blue-1);
           text-decoration: none;
           text-transform: capitalize;
-
-          &.active {
-            color: var(--color-blue-2);
-            text-decoration: underline;
-          }
+          font-family: var(--font-family);
 
           &:hover {
-            color: var(--color-blue-2);
             text-decoration: underline;
           }
         }
