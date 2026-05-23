@@ -93,32 +93,42 @@ const Booking = () => {
     return isValid;
   };
 
-  const submitForm = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      sendMessage(form);
-      // console.log(form);
+  // SEND FORM DATA TO FIREBASE
+  const sendMessage = async (form) => {
+  try {
+    await set(ref(db, "bookings/" + Math.floor(Math.random() * 10000000)), {
+      name: form.name,
+      email: form.email,
+      phone: form.phoneNumber,
+      pickupAddress: form.pickupAddress,
+      deliveryAddress: form.deliveryAddress,
+      pickupDateTime: form.pickupDateTime,
+      deliveryDateTime: form.deliveryDateTime,
+      service: form.serviceType,
+      message: form.message,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to write to Firebase:", error);
+    return false;
+  }
+};
+
+// SUBMIT FORM HANDLER
+const submitForm = async (e) => {
+  e.preventDefault();
+  if (validateForm()) {
+    const isSuccess = await sendMessage(form);
+    if (isSuccess) {
       setSuccess(true);
       setSuccessName(form.name);
       reset();
       localStorage.removeItem("booking");
+    } else {
+      alert("Something went wrong. Please try again.");
     }
-  };
-
-  // SEND FORM DATA TO FIREBASE
-  const sendMessage = (form) => {
-    set(ref(db, "orders/" + Math.floor(Math.random() * 10000000)), {
-      Name: form.name,
-      Email: form.email,
-      Phone_Number: form.phoneNumber,
-      Pickup_Address: form.pickupAddress,
-      Delivery_Address: form.deliveryAddress,
-      Pickup_DateTime: form.pickupDateTime,
-      Delivery_DateTime: form.deliveryDateTime,
-      Service_Type: form.serviceType,
-      Message: form.message,
-    });
-  };
+  }
+};
 
   // REMOVE POPUP
   const removePopup = () => {
@@ -134,7 +144,7 @@ const Booking = () => {
       }}
     >
       <Helmet>
-        <title>Machala Laundry | Booking</title>
+        <title>Machala Laundry Service | Booking</title>
         <meta name="description" content="Place booking orders here" />
       </Helmet>
       <header className="booking--header">
